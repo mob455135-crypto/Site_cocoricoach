@@ -1,0 +1,178 @@
+/* ------------------------------
+   GLOBAL
+------------------------------ */
+body {
+  font-family: "Poppins", sans-serif;
+}
+.hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438")
+      center/cover no-repeat;
+  color: white;
+  padding: 120px 0;
+  text-align: center;
+}
+.section-title {
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.pricing-card {
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  transition: 0.3s;
+}
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+footer {
+  background: #0d1b2a;
+  color: white;
+  padding: 40px 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* ------------------------------
+   NAVBAR
+------------------------------ */
+
+.navbar {
+  padding: 15px 0;
+  transition: 0.3s;
+}
+
+.navbar.scrolled {
+  background-color: #000 !important;
+  padding: 10px 0;
+}
+
+.nav-link {
+  font-weight: 500;
+  margin-left: 15px;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* ------------------------------
+   HERO SECTION
+------------------------------ */
+
+.hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438")
+      center/cover no-repeat;
+  color: white;
+  padding: 140px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* ------------------------------
+   PRICING CARDS
+------------------------------ */
+
+.pricing-card {
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  transition: 0.3s;
+  background: white;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------------------
+   IMAGES
+------------------------------ */
+
+img {
+  border-radius: 10px;
+}
+
+/* ------------------------------
+   CONTACT FORM
+------------------------------ */
+
+form input,
+form textarea {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 5px rgba(13, 110, 253, 0.4);
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+
+footer {
+  background: #0d1b2a;
+  color: white;
+  padding: 40px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+------------------------------ */
+
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 20px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}
