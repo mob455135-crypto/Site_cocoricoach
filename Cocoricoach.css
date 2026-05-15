@@ -1,178 +1,118 @@
-/* ------------------------------
-   GLOBAL
------------------------------- */
+/* Palette de couleurs de la marque */
+:root {
+  --primary-blue: #002395; /* Bleu France */
+  --primary-red: #ed2939; /* Rouge France */
+  --primary-dark: #1e293b;
+  --font-main: "Plus Jakarta Sans", sans-serif;
+}
+
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-main);
+  color: #334155;
+  overflow-x: hidden;
 }
-.hero {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438")
-      center/cover no-repeat;
+
+/* Typographie & Utilitaires */
+.text-primary-dark {
+  color: var(--primary-dark) !important;
+}
+.tracking-wide {
+  letter-spacing: 0.05em;
+}
+.text-gradient-red {
+  background: linear-gradient(90deg, #ed2939, #ff6b6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Boutons Custom */
+.btn-france {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
   color: white;
-  padding: 120px 0;
-  text-align: center;
 }
-.section-title {
-  font-weight: 700;
-  margin-bottom: 40px;
-  text-align: center;
+.btn-france:hover {
+  background-color: #001a75;
+  border-color: #001a75;
 }
-.pricing-card {
-  border-radius: 12px;
-  border: 1px solid #e5e5e5;
-  transition: 0.3s;
+
+/* Navbar Glassmorphism */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
 }
-.pricing-card:hover {
+.navbar-light .navbar-nav .nav-link {
+  color: var(--primary-dark);
+}
+.glass-nav .navbar-nav .nav-link {
+  color: white; /* Texte blanc si tout en haut au dessus de la vidéo */
+}
+.glass-nav .navbar-brand {
+  color: white !important;
+}
+
+/* Hero Video Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+}
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 35, 149, 0.8), rgba(0, 0, 0, 0.6));
+  z-index: 1;
+}
+
+/* Bento Box Design (Mission) */
+.bento-card {
+  border-radius: 24px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.bento-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
 }
-footer {
-  background: #0d1b2a;
+.bento-red {
+  background: linear-gradient(135deg, var(--primary-red), #c01b2a) !important;
+}
+
+/* Tabs Solutions Customisés */
+.custom-tabs {
+  background-color: #f1f5f9;
+}
+.custom-tabs .nav-link {
+  color: #64748b;
+  transition: all 0.3s ease;
+}
+.custom-tabs .nav-link.active {
+  background-color: var(--primary-blue);
   color: white;
-  padding: 40px 0;
-}
-body {
-  font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
+  box-shadow: 0 4px 6px rgba(0, 35, 149, 0.2);
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-weight: 700;
-}
-
-.section-title {
-  font-weight: 700;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-/* ------------------------------
-   NAVBAR
------------------------------- */
-
-.navbar {
-  padding: 15px 0;
-  transition: 0.3s;
-}
-
-.navbar.scrolled {
-  background-color: #000 !important;
-  padding: 10px 0;
-}
-
-.nav-link {
-  font-weight: 500;
-  margin-left: 15px;
-}
-
-.nav-link:hover {
-  color: #0d6efd !important;
-}
-
-/* ------------------------------
-   HERO SECTION
------------------------------- */
-
-.hero {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438")
-      center/cover no-repeat;
-  color: white;
-  padding: 140px 0;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 3rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-}
-
-/* ------------------------------
-   PRICING CARDS
------------------------------- */
-
-.pricing-card {
-  border-radius: 12px;
-  border: 1px solid #e5e5e5;
-  transition: 0.3s;
-  background: white;
-}
-
-.pricing-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-/* ------------------------------
-   IMAGES
------------------------------- */
-
-img {
-  border-radius: 10px;
-}
-
-/* ------------------------------
-   CONTACT FORM
------------------------------- */
-
-form input,
-form textarea {
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-form input:focus,
-form textarea:focus {
-  border-color: #0d6efd;
-  box-shadow: 0 0 5px rgba(13, 110, 253, 0.4);
-}
-
-/* ------------------------------
-   FOOTER
------------------------------- */
-
-footer {
-  background: #0d1b2a;
-  color: white;
-  padding: 40px 0;
-}
-
-footer p {
-  margin: 0;
-}
-
-/* ------------------------------
-   RESPONSIVE DESIGN
------------------------------- */
-
-@media (max-width: 992px) {
-  .hero h1 {
-    font-size: 2.3rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 100px 20px;
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .navbar-brand {
-    font-size: 1.2rem;
-  }
+/* Cartes Tarifs & Témoignages */
+.card {
+  border-radius: 16px;
 }
