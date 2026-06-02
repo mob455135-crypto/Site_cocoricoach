@@ -1,8 +1,6 @@
 /* ============ VARIABLES PREMIUM ============ */
 :root {
-  /* Changement : Bleu Roi profond (Navy/Royal premium) */
   --primary-blue: #0a2342;
-  /* Changement : Rouge carmin élégant */
   --primary-red: #c8102e;
   --primary-dark: #1e293b;
   --font-main: "Plus Jakarta Sans", sans-serif;
@@ -12,7 +10,7 @@ body {
   font-family: var(--font-main);
   color: #334155;
   overflow-x: hidden;
-  background-color: #f8fafc; /* Fond très légèrement grisé pour faire ressortir les éléments blancs */
+  background-color: #f8fafc;
 }
 
 .text-primary-dark {
@@ -20,7 +18,7 @@ body {
 }
 .tracking-wide {
   letter-spacing: 0.08em;
-} /* Légèrement augmenté pour le côté premium */
+}
 
 /* ============ BOUTONS ============ */
 .btn-france {
@@ -31,7 +29,7 @@ body {
   transition: all 0.3s ease;
 }
 .btn-france:hover {
-  background-color: #06162a; /* Encore plus sombre au survol */
+  background-color: #06162a;
   border-color: #06162a;
   color: white;
   transform: translateY(-2px);
@@ -88,7 +86,7 @@ body {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 1s ease-in-out; /* Transition adoucie */
+  transition: opacity 1s ease-in-out;
   pointer-events: none;
 }
 .hero-slide.active {
@@ -112,7 +110,6 @@ body {
   inset: 0;
   z-index: 1;
 }
-/* Dégradés premium, légèrement plus sombres pour mieux lire le texte */
 .coach-overlay {
   background: linear-gradient(
     135deg,
@@ -120,11 +117,12 @@ body {
     rgba(0, 0, 0, 0.7)
   );
 }
+/* MODIFICATION : filtre rouge supprimé, overlay très léger pour garder la lisibilité du texte */
 .club-overlay {
   background: linear-gradient(
-    135deg,
-    rgba(130, 10, 20, 0.85),
-    rgba(0, 0, 0, 0.7)
+    to bottom,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.5)
   );
 }
 .hero-content {
@@ -136,9 +134,8 @@ body {
   padding-top: 80px;
 }
 
-/* Titre hero étalé */
 .hero-title {
-  font-size: clamp(2.5rem, 6vw, 5rem); /* Police plus grande et adaptative */
+  font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 1.15;
   text-align: center;
   width: 100%;
@@ -146,7 +143,6 @@ body {
   letter-spacing: -0.02em;
 }
 
-/* Icônes rapides hero */
 .hero-icons {
   display: flex;
   align-items: center;
@@ -170,8 +166,68 @@ body {
   font-size: 1.2rem;
 }
 
-/* Reste du CSS (Flèches, Progress bar, Tabs) inchangé... */
-/* Garde tes flèches et ton animation de barre de progression tels quels */
+/* Dots */
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+.hero-dot.active {
+  background: white;
+  width: 28px;
+  border-radius: 5px;
+}
+
+/* Flèches */
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background 0.2s ease;
+}
+.hero-arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.hero-arrow-left {
+  left: 20px;
+}
+.hero-arrow-right {
+  right: 20px;
+}
+
+/* Barre progression */
+.hero-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 10;
+}
+.hero-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: white;
+}
 
 /* ============ CARDS SOLUTIONS ============ */
 .sol-card {
@@ -180,11 +236,9 @@ body {
   padding: 40px 32px;
   height: 100%;
   text-align: center;
-  border: 1px solid rgba(0, 0, 0, 0.05); /* Bordure très discrète */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); /* Ombre douce premium */
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .sol-card:hover {
   transform: translateY(-6px);
@@ -196,7 +250,6 @@ body {
 .sol-card-red {
   border-top: 4px solid var(--primary-red);
 }
-
 .sol-card-icon {
   font-size: 2.5rem;
   color: var(--primary-blue);
@@ -205,6 +258,21 @@ body {
 .sol-icon-red {
   color: var(--primary-red) !important;
 }
+
+/* ============ TABS ============ */
+.custom-tabs {
+  background-color: #f1f5f9;
+}
+.custom-tabs .nav-link {
+  color: #64748b;
+  transition: all 0.3s ease;
+}
+.custom-tabs .nav-link.active {
+  background-color: var(--primary-blue);
+  color: white;
+  box-shadow: 0 4px 6px rgba(10, 35, 66, 0.2);
+}
+
 /* ============ TARIFS ============ */
 .pricing-col-header {
   display: flex;
@@ -228,7 +296,6 @@ body {
   opacity: 0.8;
   margin-top: 4px;
 }
-
 .pricing-row-item {
   display: flex;
   align-items: center;
@@ -269,7 +336,6 @@ body {
   font-weight: 400;
   color: #94a3b8;
 }
-
 .pricing-row-featured {
   background: linear-gradient(135deg, #f0f4ff, #e8edff);
   border-color: #c7d4ff;
@@ -287,7 +353,6 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-
 .pricing-athlete-badges {
   display: flex;
   flex-wrap: wrap;
@@ -302,8 +367,6 @@ body {
   border-radius: 20px;
   border: 1px solid #e2e8f0;
 }
-
-/* Club card */
 .pricing-club-card {
   border: 1px solid #fecdd3;
   border-top: none;
@@ -332,7 +395,6 @@ body {
   padding: 160px 0 80px;
   text-align: center;
 }
-
 .founder-card {
   background: white;
   border-radius: 24px;
@@ -341,16 +403,12 @@ body {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   border: 1px solid #f1f5f9;
   height: 100%;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .founder-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }
-
 .founder-avatar {
   width: 90px;
   height: 90px;
@@ -363,21 +421,18 @@ body {
   color: white;
   margin: 0 auto;
 }
-
 .founder-avatar-blue {
   background: linear-gradient(135deg, var(--primary-blue), #0040c1);
 }
 .founder-avatar-red {
   background: linear-gradient(135deg, var(--primary-red), #c01b2a);
 }
-
 .solution-preview {
   border-radius: 24px;
   padding: 40px 32px;
   height: 100%;
   transition: transform 0.3s ease;
 }
-
 .solution-preview:hover {
   transform: translateY(-6px);
 }
@@ -387,9 +442,13 @@ body {
 .solution-preview-red {
   background: linear-gradient(135deg, var(--primary-red), #c01b2a);
 }
-
 .solution-preview-icon {
   font-size: 2.5rem;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 16px;
+}
+
+/* ============ BENTO ============ */
+.bento-red {
+  background: linear-gradient(135deg, var(--primary-red), #9c0c24) !important;
 }
