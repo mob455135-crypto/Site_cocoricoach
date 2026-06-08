@@ -3,313 +3,555 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cocoricoach – L'Intelligence au Service de la Performance</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="Cocoricoach.css"/>
+    <title>Cocoricoach – L'Élite de la Performance Sportive</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Cocoricoach.css" />
   </head>
   <body data-bs-spy="scroll" data-bs-target="#navbar-example">
-    <nav id="navbar-example" class="navbar navbar-expand-xl navbar-light fixed-top glass-nav">
+    <nav
+      id="navbar-example"
+      class="navbar navbar-expand-xl navbar-light fixed-top glass-nav"
+    >
       <div class="container-fluid px-4 px-lg-5">
-        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
-          <img src="Cocoricoach_logo.jpeg" alt="Logo" height="38" class="navbar-logo rounded-circle"/>
-          COCORICOACH
+        <a
+          class="navbar-brand fw-bold d-flex align-items-center gap-2"
+          href="#accueil"
+        >
+          <img
+            src="Cocoricoach_logo.jpeg"
+            alt="Logo"
+            height="38"
+            class="navbar-logo rounded-circle"
+          />
+          <span class="brand-text text-white" data-i18n="brand"
+            >COCORICOACH</span
+          >
         </a>
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto fw-semibold">
-            <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link" href="#solutions">Solutions</a></li>
-            <li class="nav-item"><a class="nav-link" href="#pricing">Tarifs</a></li>
-            <li class="nav-item"><a class="nav-link" href="#temoignages">Témoignages</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#accueil" data-i18n="nav_home"
+                >Accueil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#apps" data-i18n="nav_apps"
+                >Applications</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#expertise" data-i18n="nav_expertise"
+                >Expertise</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#dashboard" data-i18n="nav_data"
+                >La Data</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing" data-i18n="nav_pricing"
+                >Tarifs</a
+              >
+            </li>
           </ul>
-          <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
-            <button class="btn btn-light btn-sm rounded-pill border fw-bold" onclick="toggleLang(this)">FR | EN</button>
-            <a href="#" class="btn btn-primary rounded-pill px-4 btn-france btn-sm">
-              <i class="bi bi-person-fill me-1"></i>Connexion Coach
+          <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0 flex-wrap">
+            <button
+              class="btn btn-outline-light btn-sm rounded-pill fw-bold px-3 border-2"
+              id="langToggle"
+            >
+              EN
+            </button>
+            <a
+              href="https://cocoricoach.com/"
+              target="_blank"
+              class="btn btn-primary rounded-pill px-4 btn-france btn-sm fw-bold"
+            >
+              <i class="bi bi-person-fill me-1"></i>
+              <span data-i18n="login_coach">Login Coach</span>
             </a>
-            <a href="#" class="btn btn-danger rounded-pill px-4 btn-sm">
-              <i class="bi bi-shield-fill me-1"></i>Connexion Club
+            <a
+              href="https://cocoricoachclub.com/auth"
+              target="_blank"
+              class="btn btn-danger rounded-pill px-4 btn-sm fw-bold"
+            >
+              <i class="bi bi-shield-lock-fill me-1"></i>
+              <span data-i18n="login_club">Login Club</span>
             </a>
           </div>
         </div>
       </div>
     </nav>
 
-    <section id="accueil" class="hero-carousel-section">
-      <div class="hero-slide active" id="slide-coach">
-        <video playsinline autoplay muted loop class="hero-video">
-          <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4"/>
-        </video>
-        <div class="hero-overlay coach-overlay"></div>
-        <div class="container-fluid px-lg-5 h-100 position-relative hero-content" style="z-index:2">
-          <div class="row h-100 align-items-center text-center justify-content-center">
-            <div class="col-xl-10 col-lg-12 col-12">
-              <span class="badge bg-primary text-white rounded-pill px-4 py-2 mb-4 text-uppercase tracking-wide shadow-sm">
-                <i class="bi bi-person-fill me-1"></i> Pour les coachs indépendants
-              </span>
-              <h1 class="hero-title fw-bold text-white mb-4">
-                Gérez votre activité. Boostez vos athlètes.
-              </h1>
-              <div class="hero-icons mb-5">
-                <div class="hero-icon-item"><i class="bi bi-calendar-check-fill"></i><span>Planning & salle</span></div>
-                <div class="hero-icon-sep">·</div>
-                <div class="hero-icon-item"><i class="bi bi-person-lines-fill"></i><span>Suivi athlètes</span></div>
-                <div class="hero-icon-sep">·</div>
-                <div class="hero-icon-item"><i class="bi bi-wallet-fill"></i><span>Vente de programmes</span></div>
-              </div>
-              <div class="d-flex justify-content-center mb-5 gap-2">
-                <button class="hero-dot active" onclick="goToSlide(0)" aria-label="Slide 1"></button>
-                <button class="hero-dot" onclick="goToSlide(1)" aria-label="Slide 2"></button>
-              </div>
-              <div class="d-flex justify-content-center gap-3 flex-wrap">
-                <a href="#solutions" class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg btn-france">Découvrir Cocoricoach</a>
-                <a href="#pricing" class="btn btn-outline-light btn-lg rounded-pill px-5">Voir les tarifs</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-slide" id="slide-club">
-        <video playsinline muted loop class="hero-video" id="video-club">
-          <source src="Video1.mp4" type="video/mp4"/>
-        </video>
-        <div class="hero-overlay club-overlay"></div>
-        <div class="container-fluid px-lg-5 h-100 position-relative hero-content" style="z-index:2">
-          <div class="row h-100 align-items-center text-center justify-content-center">
-            <div class="col-xl-10 col-lg-12 col-12">
-              <span class="badge bg-danger text-white rounded-pill px-4 py-2 mb-4 text-uppercase tracking-wide shadow-sm">
-                <i class="bi bi-shield-fill me-1"></i> Pour les clubs & structures
-              </span>
-              <h1 class="hero-title fw-bold text-white mb-4">
-                Le lien entre le terrain et la data.
-              </h1>
-              <div class="hero-icons mb-5">
-                <div class="hero-icon-item"><i class="bi bi-graph-up-arrow"></i><span>Data performance</span></div>
-                <div class="hero-icon-sep">·</div>
-                <div class="hero-icon-item"><i class="bi bi-people-fill"></i><span>Gestion du staff</span></div>
-                <div class="hero-icon-sep">·</div>
-                <div class="hero-icon-item"><i class="bi bi-lightning-fill"></i><span>Décisions en temps réel</span></div>
-              </div>
-              <div class="d-flex justify-content-center mb-5 gap-2">
-                <button class="hero-dot" onclick="goToSlide(0)" aria-label="Slide 1"></button>
-                <button class="hero-dot active" onclick="goToSlide(1)" aria-label="Slide 2"></button>
-              </div>
-              <div class="d-flex justify-content-center gap-3 flex-wrap">
-                <a href="#solutions" class="btn btn-danger btn-lg rounded-pill px-5 shadow-lg">Découvrir Cocoricoach Club</a>
-                <a href="#contact" class="btn btn-outline-light btn-lg rounded-pill px-5">Demander un devis</a>
+    <section id="accueil" class="portal-hero-container" id="apps">
+      <div class="container-fluid p-0 h-100">
+        <div class="row g-0 h-100">
+          <div
+            class="col-xl-6 portal-wing position-relative overflow-hidden"
+            data-aos="fade-in"
+            data-aos-duration="1000"
+          >
+            <video playsinline autoplay muted loop class="portal-bg-video">
+              <source
+                src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="portal-overlay overlay-blue"></div>
+            <div
+              class="portal-wing-content d-flex flex-column justify-content-center px-4 px-md-5 text-center text-xl-start"
+            >
+              <div class="max-width-wrapper">
+                <h2
+                  class="fw-bold text-white mb-4 hero-headline"
+                  data-i18n="hero_coach_title"
+                >
+                  Gérez votre activité.<br />Boostez vos athlètes.
+                </h2>
+                <p class="fs-5 text-white-50 mb-5 description-text">
+                  Pilotez votre business de personal training, planifiez vos
+                  séances et vendez vos programmes en ligne avec une interface
+                  moderne et fluide.
+                </p>
+                <a
+                  href="page-cocoricoach.html"
+                  class="btn btn-primary btn-lg rounded-pill px-5 fw-bold btn-france shadow-lg"
+                  data-i18n="btn_explore_app"
+                  >Explorer l'application</a
+                >
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <button class="hero-arrow hero-arrow-left" onclick="changeSlide(-1)"><i class="bi bi-chevron-left"></i></button>
-      <button class="hero-arrow hero-arrow-right" onclick="changeSlide(1)"><i class="bi bi-chevron-right"></i></button>
-      <div class="hero-progress-bar"><div class="hero-progress-fill" id="progressFill"></div></div>
-    </section>
-
-    <!-- ============ SOLUTIONS ============ -->
-    <section id="solutions" class="py-5 bg-white">
-      <div class="container py-5">
-        <div class="text-center mb-5" data-aos="fade-up">
-          <h2 class="display-5 fw-bold">Un écosystème, deux solutions.</h2>
-          <p class="lead text-muted">Deux applications distinctes, deux publics différents — une seule plateforme.</p>
-        </div>
-        <ul class="nav nav-pills custom-tabs justify-content-center mb-5 shadow-sm rounded-pill p-2 mx-auto" style="max-width:600px" id="pills-tab" role="tablist" data-aos="zoom-in">
-          <li class="nav-item w-50 text-center" role="presentation">
-            <button class="nav-link active w-100 rounded-pill fw-bold py-2" data-bs-toggle="pill" data-bs-target="#coach">
-              <i class="bi bi-person-fill me-2"></i>Cocoricoach
-            </button>
-          </li>
-          <li class="nav-item w-50 text-center" role="presentation">
-            <button class="nav-link w-100 rounded-pill fw-bold py-2" data-bs-toggle="pill" data-bs-target="#club">
-              <i class="bi bi-shield-fill me-2"></i>Cocoricoach Club
-            </button>
-          </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="coach" role="tabpanel">
-            <p class="text-center text-muted mb-5 fw-semibold fs-5" data-aos="fade-up">
-              <i class="bi bi-person-fill text-primary me-2"></i>Pour les <strong>coachs sportifs</strong> et <strong>structures indépendantes</strong>
-            </p>
-            <div class="row g-4 mb-5" data-aos="fade-up">
-              <div class="col-md-4">
-                <div class="sol-card sol-card-blue">
-                  <div class="sol-card-icon"><i class="bi bi-calendar-check-fill"></i></div>
-                  <h5 class="fw-bold">Gérez votre activité</h5>
-                  <p class="text-muted small mt-3">Clients, planning, salles, réservations — tout centralisé en un seul endroit.</p>
-                </div>
+          <div
+            class="col-xl-6 portal-wing position-relative overflow-hidden"
+            data-aos="fade-in"
+            data-aos-duration="1000"
+          >
+            <video
+              playsinline
+              autoplay
+              muted
+              loop
+              class="portal-bg-video"
+              id="video-club"
+            >
+              <source src="Video1.mp4" type="video/mp4" />
+            </video>
+            <div class="portal-overlay overlay-red"></div>
+            <div
+              class="portal-wing-content d-flex flex-column justify-content-center px-4 px-md-5 text-center text-xl-start"
+            >
+              <div class="max-width-wrapper">
+                <h2
+                  class="fw-bold text-white mb-4 hero-headline"
+                  data-i18n="hero_club_title"
+                >
+                  Le lien entre<br />le terrain et la data.
+                </h2>
+                <p class="fs-5 text-white-50 mb-5 description-text">
+                  Centralisez les métriques physiques, médicales et sportives de
+                  vos équipes pour piloter la performance collective en temps
+                  réel.
+                </p>
+                <a
+                  href="page-cocoricoach-club.html"
+                  class="btn btn-danger btn-lg rounded-pill px-5 fw-bold shadow-lg"
+                  data-i18n="btn_explore_club"
+                  >Découvrir l'offre Club</a
+                >
               </div>
-              <div class="col-md-4">
-                <div class="sol-card sol-card-blue">
-                  <div class="sol-card-icon"><i class="bi bi-person-lines-fill"></i></div>
-                  <h5 class="fw-bold">Suivez vos athlètes</h5>
-                  <p class="text-muted small mt-3">Programmation, progression, objectifs et échanges simplifiés avec chaque athlète.</p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="sol-card sol-card-blue">
-                  <div class="sol-card-icon"><i class="bi bi-wallet-fill"></i></div>
-                  <h5 class="fw-bold">Monétisez votre expertise</h5>
-                  <p class="text-muted small mt-3">Vendez vos programmes, ebooks et plans d'entraînement directement depuis la plateforme.</p>
-                </div>
-              </div>
-            </div>
-            <div class="text-center" data-aos="fade-up">
-              <a href="#pricing" class="btn btn-france rounded-pill px-5 py-2">Voir les tarifs</a>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="club" role="tabpanel">
-            <p class="text-center text-muted mb-5 fw-semibold fs-5" data-aos="fade-up">
-              <i class="bi bi-shield-fill text-danger me-2"></i>Pour les <strong>clubs sportifs</strong> et <strong>organisations professionnelles</strong>
-            </p>
-            <div class="row g-4 mb-5" data-aos="fade-up">
-              <div class="col-md-4">
-                <div class="sol-card sol-card-red">
-                  <div class="sol-card-icon sol-icon-red"><i class="bi bi-graph-up-arrow"></i></div>
-                  <h5 class="fw-bold">Pilotez la performance</h5>
-                  <p class="text-muted small mt-3">Suivi individuel et collectif, charge de travail, récupération et KPIs en temps réel.</p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="sol-card sol-card-red">
-                  <div class="sol-card-icon sol-icon-red"><i class="bi bi-people-fill"></i></div>
-                  <h5 class="fw-bold">Alignez votre staff</h5>
-                  <p class="text-muted small mt-3">Préparateurs, entraîneurs, médical et dirigeants — tous connectés sur une seule plateforme.</p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="sol-card sol-card-red">
-                  <div class="sol-card-icon sol-icon-red"><i class="bi bi-lightning-fill"></i></div>
-                  <h5 class="fw-bold">Décidez en temps réel</h5>
-                  <p class="text-muted small mt-3">Visualisez l'état de forme des joueurs et ajustez vos décisions d'entraînement instantanément.</p>
-                </div>
-              </div>
-            </div>
-            <div class="mt-3 p-3 bg-light rounded-3 border-start border-danger border-3 text-center mx-auto" style="max-width:600px" data-aos="fade-up">
-              <small class="text-muted"><i class="bi bi-info-circle me-2 text-danger"></i>Cocoricoach Club est disponible <strong>sur devis uniquement</strong>.</small>
-            </div>
-            <div class="text-center mt-4" data-aos="fade-up">
-              <a href="#contact" class="btn btn-danger rounded-pill px-5 py-2">Demander un devis</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ TARIFS ============ -->
-    <section id="pricing" class="py-5 bg-light">
-      <div class="container py-5">
-        <div class="text-center mb-5" data-aos="fade-up">
-          <h2 class="display-6 fw-bold">Nos tarifs</h2>
-          <p class="text-muted">Simple, transparent, adapté à votre profil</p>
+    <section class="py-5 bg-white border-bottom position-relative z-3">
+      <div class="container-fluid px-4 px-lg-5">
+        <div class="row g-4 text-center justify-content-center">
+          <div class="col-md-4 col-sm-6" data-aos="zoom-in">
+            <h3 class="display-4 fw-bold text-primary-dark mb-1">150+</h3>
+            <p
+              class="text-muted text-uppercase tracking-wide small fw-bold mb-0"
+              data-i18n="stat_clubs"
+            >
+              Clubs Partenaires
+            </p>
+          </div>
+          <div
+            class="col-md-4 col-sm-6"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <h3 class="display-4 fw-bold text-danger mb-1">10k+</h3>
+            <p
+              class="text-muted text-uppercase tracking-wide small fw-bold mb-0"
+              data-i18n="stat_athletes"
+            >
+              Athlètes Suivis
+            </p>
+          </div>
+          <div
+            class="col-md-4 col-sm-6"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <h3 class="display-4 fw-bold text-primary-dark mb-1">98%</h3>
+            <p
+              class="text-muted text-uppercase tracking-wide small fw-bold mb-0"
+              data-i18n="stat_satisfaction"
+            >
+              Taux de Satisfaction
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise" class="py-6 bg-light border-bottom">
+      <div class="container-fluid px-4 px-lg-5">
+        <div class="text-center mb-5 max-width-text mx-auto" data-aos="fade-up">
+          <h2
+            class="display-5 fw-bold text-primary-dark mt-2"
+            data-i18n="exp_title"
+          >
+            Nos Domaines d'Expertise
+          </h2>
         </div>
         <div class="row g-4 justify-content-center">
-          <div class="col-lg-6" data-aos="fade-right">
-            <div class="pricing-col-header pricing-col-blue">
-              <i class="bi bi-person-fill me-2"></i>Cocoricoach
-              <span class="pricing-col-sub">Coachs & structures indépendantes</span>
-            </div>
-            <div class="pricing-row-item">
-              <div class="pricing-row-left">
-                <div class="pricing-row-name">Suivi personnalisé seul</div>
-                <div class="pricing-row-desc">Selon votre nombre d'athlètes</div>
-                <div class="pricing-athlete-badges">
-                  <span>Jusqu'à 9 → <strong>15€</strong>/mois</span>
-                  <span>9 à 19 → <strong>25€</strong>/mois</span>
-                  <span>+20 → <strong>35€</strong>/mois</span>
-                </div>
-              </div>
-              <a href="#contact" class="btn btn-outline-primary rounded-pill btn-sm px-4">Choisir</a>
-            </div>
-            <div class="pricing-row-item">
-              <div class="pricing-row-left">
-                <div class="pricing-row-name">Suivi + Programme</div>
-                <div class="pricing-row-desc">Suivi perso (+20 athlètes) + vente de programmes</div>
-              </div>
-              <div class="pricing-row-price">50€<span>/mois</span></div>
-            </div>
-            <div class="pricing-row-item pricing-row-featured">
-              <div class="pricing-featured-tag">Tout inclus</div>
-              <div class="pricing-row-left">
-                <div class="pricing-row-name">Pack Complet</div>
-                <div class="pricing-row-desc">Salle + programmes + suivi perso illimité</div>
-              </div>
-              <div class="pricing-row-price">100€<span>/mois</span></div>
-            </div>
-            <div class="text-center mt-4">
-              <a href="#contact" class="btn btn-france rounded-pill px-5">Souscrire</a>
+          <div class="col-xl-4 col-md-6" data-aos="fade-up">
+            <div
+              class="catapult-card shadow-sm border-0"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1518622358385-8ea7d0794bf6?q=80&w=800&auto=format&fit=crop&quot;);
+              "
+            >
+              <div class="catapult-gradient"></div>
+              <h4 class="catapult-title" data-i18n="cat_title_1">
+                SUIVI DE L'ATHLÈTE
+              </h4>
+              <div class="catapult-border border-danger"></div>
             </div>
           </div>
-          <div class="col-lg-6" data-aos="fade-left">
-            <div class="pricing-col-header pricing-col-red">
-              <i class="bi bi-shield-fill me-2"></i>Cocoricoach Club
-              <span class="pricing-col-sub">Clubs & organisations sportives</span>
+          <div
+            class="col-xl-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="catapult-card shadow-sm border-0"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop&quot;);
+              "
+            >
+              <div class="catapult-gradient"></div>
+              <h4 class="catapult-title" data-i18n="cat_title_2">
+                DATA & ANALYTICS
+              </h4>
+              <div class="catapult-border border-primary"></div>
             </div>
-            <div class="pricing-club-card">
-              <div class="pricing-club-icon"><i class="bi bi-shield-fill"></i></div>
-              <h4 class="fw-bold mb-2">Sur devis</h4>
-              <p class="text-muted mb-4">Tarif personnalisé selon la taille et les besoins de votre structure sportive.</p>
-              <ul class="list-unstyled mb-4">
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i>Gestion de la performance collective</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i>Suivi individuel & collectif des athlètes</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i>KPIs & tableaux de bord en temps réel</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i>Communication staff unifiée</li>
-                <li><i class="bi bi-check-circle-fill text-danger me-2"></i>Accessible mobile & desktop</li>
-              </ul>
-              <a href="#contact" class="btn btn-danger rounded-pill w-100 py-3 fw-bold">Demander un devis</a>
+          </div>
+          <div
+            class="col-xl-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="catapult-card shadow-sm border-0"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1526232761682-d26e03ac148e?q=80&w=800&auto=format&fit=crop&quot;);
+              "
+            >
+              <div class="catapult-gradient"></div>
+              <h4 class="catapult-title" data-i18n="cat_title_3">
+                PLANIFICATION
+              </h4>
+              <div class="catapult-border border-warning"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ TÉMOIGNAGES ============ -->
-    <section id="temoignages" class="py-5 bg-white">
-      <div class="container py-5">
-        <h2 class="text-center display-6 fw-bold mb-2" data-aos="fade-up">Ils parlent de nous</h2>
-        <p class="text-center text-muted mb-5" data-aos="fade-up">Ce que nos utilisateurs pensent de Cocoricoach</p>
+    <section
+      id="dashboard"
+      class="py-6 text-white"
+      style="background-color: var(--primary-blue)"
+    >
+      <div class="container-fluid px-4 px-lg-5">
+        <div class="row align-items-center g-5 justify-content-center">
+          <div class="col-xl-5 col-lg-6" data-aos="fade-right">
+            <h2 class="display-5 fw-bold mb-4" data-i18n="data_title">
+              Une interface pensée pour la performance.
+            </h2>
+            <p class="fs-5 text-white-50 mb-4">
+              Visualisez instantanément l'état de forme de vos sportifs,
+              centralisez les KPIs et gérez vos charges d'entraînement. Notre
+              plateforme offre une lecture fluide de la data sportive.
+            </p>
+            <ul class="list-unstyled text-white-50 fs-5 mb-0">
+              <li class="mb-3">
+                <i class="bi bi-check-circle-fill text-danger me-3"></i>
+                Tableaux de bord et graphiques
+              </li>
+              <li class="mb-3">
+                <i class="bi bi-check-circle-fill text-danger me-3"></i> Suivi
+                des indices de récupération
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill text-danger me-3"></i>
+                Centralisation sécurisée
+              </li>
+            </ul>
+          </div>
+          <div class="col-xl-6 col-lg-6" data-aos="fade-left">
+            <div class="dashboard-mockup p-2 bg-white rounded-4 shadow-lg">
+              <div class="d-flex gap-2 p-3 pb-2 bg-light rounded-top-4">
+                <div
+                  style="
+                    width: 12px;
+                    height: 12px;
+                    background: #c8102e;
+                    border-radius: 50%;
+                  "
+                ></div>
+                <div
+                  style="
+                    width: 12px;
+                    height: 12px;
+                    background: #ffc107;
+                    border-radius: 50%;
+                  "
+                ></div>
+                <div
+                  style="
+                    width: 12px;
+                    height: 12px;
+                    background: #198754;
+                    border-radius: 50%;
+                  "
+                ></div>
+              </div>
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
+                class="img-fluid rounded-bottom-4"
+                alt="Dashboard"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="py-6 bg-light border-bottom">
+      <div class="container-fluid px-4 px-lg-5">
+        <div class="text-center mb-5 max-width-text mx-auto" data-aos="fade-up">
+          <h2
+            class="display-5 fw-bold text-primary-dark"
+            data-i18n="pricing_title"
+          >
+            Des Grilles Tarifaires Claires
+          </h2>
+        </div>
+        <div class="row g-4 justify-content-center align-items-stretch">
+          <div class="col-xl-6 col-lg-12" data-aos="fade-right">
+            <div
+              class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden"
+            >
+              <div class="pricing-col-header bg-primary p-4 text-white">
+                <h3 class="fw-bold fs-4 mb-0">
+                  <i class="bi bi-person-fill me-2"></i>Cocoricoach
+                </h3>
+              </div>
+              <div class="card-body p-0">
+                <div class="pricing-row-item">
+                  <div>
+                    <div class="pricing-row-name">Suivi personnalisé seul</div>
+                    <div class="pricing-athlete-badges mt-2">
+                      <span>Jusqu'à 9 → <strong>15€</strong>/m</span>
+                      <span>9 à 19 → <strong>25€</strong>/m</span>
+                      <span>+20 → <strong>35€</strong>/m</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="pricing-row-item">
+                  <div>
+                    <div class="pricing-row-name">Suivi + Programme</div>
+                  </div>
+                  <div class="fs-3 fw-bold text-primary">
+                    50€<span class="fs-6 text-muted font-normal">/m</span>
+                  </div>
+                </div>
+                <div class="pricing-row-item pricing-row-featured p-4">
+                  <span
+                    class="badge bg-primary position-absolute top-0 start-0 ms-4 mt-n2"
+                    >Tout Inclus</span
+                  >
+                  <div>
+                    <div class="pricing-row-name text-primary-dark">
+                      Pack Complet Premium
+                    </div>
+                    <div class="text-muted small">
+                      Salles + modules de réservation + programmes + suivi
+                      complet
+                    </div>
+                  </div>
+                  <div class="fs-3 fw-bold text-primary">
+                    100€<span class="fs-6 text-muted font-normal">/m</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-6 col-lg-12" data-aos="fade-left">
+            <div
+              class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden"
+            >
+              <div class="pricing-col-header bg-danger p-4 text-white">
+                <h3 class="fw-bold fs-4 mb-0">
+                  <i class="bi bi-shield-fill me-2"></i>Cocoricoach Club
+                </h3>
+              </div>
+              <div
+                class="p-5 bg-white d-flex flex-column h-100 justify-content-between"
+              >
+                <div>
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4"
+                  >
+                    <div class="fs-1 text-danger">
+                      <i class="bi bi-trophy-fill"></i>
+                    </div>
+                    <div class="text-end">
+                      <h4 class="display-5 fw-bold text-danger mb-0">
+                        75€<span class="fs-5 text-muted fw-normal">/mois</span>
+                      </h4>
+                      <p class="text-success small fw-bold mb-0">
+                        Ou 800€ en paiement unique annuel
+                      </p>
+                    </div>
+                  </div>
+                  <ul class="list-unstyled text-muted fs-6 mb-5">
+                    <li class="mb-3">
+                      <i class="bi bi-check-circle-fill text-danger me-2"></i>
+                      Gestion complète de la performance collective
+                    </li>
+                    <li class="mb-3">
+                      <i class="bi bi-check-circle-fill text-danger me-2"></i>
+                      Suivi athlétique, médical et charges de travail
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill text-danger me-2"></i>
+                      Communication instantanée entre départements
+                    </li>
+                  </ul>
+                </div>
+                <a
+                  href="#contact"
+                  class="btn btn-danger rounded-pill w-100 py-3 fw-bold fs-6"
+                  >Demander une démo de la structure</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="temoignages" class="py-6 bg-white border-bottom">
+      <div class="container-fluid px-4 px-lg-5">
+        <div class="text-center mb-5 max-width-text mx-auto" data-aos="fade-up">
+          <h2
+            class="display-5 fw-bold text-primary-dark"
+            data-i18n="testi_title"
+          >
+            Approuvé par les pros
+          </h2>
+        </div>
         <div class="row g-4">
-          <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card border-0 shadow-sm p-4 h-100 rounded-4">
-              <div class="d-flex mb-3">
-                <i class="bi bi-star-fill text-warning me-1"></i><i class="bi bi-star-fill text-warning me-1"></i>
-                <i class="bi bi-star-fill text-warning me-1"></i><i class="bi bi-star-fill text-warning me-1"></i>
-                <i class="bi bi-star-fill text-warning"></i>
+          <div class="col-lg-6" data-aos="zoom-in">
+            <div
+              class="card border-0 bg-light p-5 h-100 rounded-4 testimonial-card"
+            >
+              <div class="d-flex mb-4 text-warning fs-5">
+                <i class="bi bi-star-fill me-1"></i
+                ><i class="bi bi-star-fill me-1"></i
+                ><i class="bi bi-star-fill me-1"></i
+                ><i class="bi bi-star-fill me-1"></i
+                ><i class="bi bi-star-fill"></i>
               </div>
-              <p class="fst-italic text-muted mb-4">"L'interface de Cocoricoach Club nous a permis de centraliser les données médicales et sportives. Le gain de temps est énorme pour le staff."</p>
+              <p class="fst-italic text-muted fs-5 mb-5">
+                "L'architecture logicielle de Cocoricoach Club a radicalement
+                transformé la centralisation de nos métriques de performance. Le
+                staff technique et médical communique enfin sur un espace
+                unifié."
+              </p>
               <div class="d-flex align-items-center mt-auto">
-                <div class="rounded-circle bg-danger d-flex align-items-center justify-content-center text-white fw-bold me-3" style="width:48px;height:48px;min-width:48px">JD</div>
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop"
+                  class="rounded-circle me-3 border"
+                  width="64"
+                  height="64"
+                  alt="Thomas R."
+                />
                 <div>
-                  <h6 class="mb-0 fw-bold">Julien D.</h6>
-                  <span class="text-muted small">Préparateur Physique Pro</span>
+                  <h6 class="mb-0 fw-bold fs-5 text-primary-dark">Thomas R.</h6>
+                  <span class="text-muted small fw-semibold"
+                    >Directeur de la Performance — Stade Toulousain</span
+                  >
                 </div>
-                <span class="badge bg-danger ms-auto">Club</span>
               </div>
             </div>
           </div>
-          <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
-            <div class="card border-0 shadow-sm p-4 h-100 rounded-4">
-              <div class="d-flex mb-3">
-                <i class="bi bi-star-fill text-warning me-1"></i><i class="bi bi-star-fill text-warning me-1"></i>
-                <i class="bi bi-star-fill text-warning me-1"></i><i class="bi bi-star-fill text-warning me-1"></i>
-                <i class="bi bi-star-fill text-warning"></i>
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+            <div
+              class="card border-0 bg-light p-5 h-100 rounded-4 testimonial-card"
+            >
+              <div class="d-flex mb-4 text-warning fs-5">
+                <i class="bi bi-star-fill me-1"></i
+                ><i class="bi bi-star-fill me-1"></i
+                ><i class="bi bi-star-fill me-1"></i
+                ><i class="bi bi-star-fill me-1"></i
+                ><i class="bi bi-star-fill"></i>
               </div>
-              <p class="fst-italic text-muted mb-4">"Pouvoir gérer ma salle, mes réservations et vendre mes ebooks sur la même plateforme a transformé mon business."</p>
+              <p class="fst-italic text-muted fs-5 mb-5">
+                "Avant de centraliser sur cette application, je perdais un temps
+                précieux. Cocoricoach m'a permis de structurer mon business
+                comme une vraie entreprise avec la vente en ligne de mes
+                programmes."
+              </p>
               <div class="d-flex align-items-center mt-auto">
-                <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center text-white fw-bold me-3" style="width:48px;height:48px;min-width:48px">ML</div>
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&h=120&fit=crop"
+                  class="rounded-circle me-3 border"
+                  width="64"
+                  height="64"
+                  alt="Sarah M."
+                />
                 <div>
-                  <h6 class="mb-0 fw-bold">Marie L.</h6>
-                  <span class="text-muted small">Coach Indépendante</span>
+                  <h6 class="mb-0 fw-bold fs-5 text-primary-dark">Sarah M.</h6>
+                  <span class="text-muted small fw-semibold"
+                    >Préparatrice Physique Indépendante</span
+                  >
                 </div>
-                <span class="badge bg-primary ms-auto">Coach</span>
               </div>
             </div>
           </div>
@@ -317,36 +559,109 @@
       </div>
     </section>
 
-    <!-- ============ FOOTER / CONTACT ============ -->
     <footer id="contact" class="bg-dark text-white pt-5 pb-3">
-      <div class="container">
-        <div class="row mb-4">
-          <div class="col-md-4 mb-3">
-            <div class="d-flex align-items-center gap-2 mb-3">
-              <img src="Cocoricoach_logo.jpeg" alt="Logo" height="45" class="rounded-circle footer-logo"/>
-              <h5 class="fw-bold text-white mb-0">COCORICOACH</h5>
+      <div class="container-fluid px-4 px-lg-5">
+        <div class="row mb-5 g-5">
+          <div class="col-xl-4 col-lg-12">
+            <div class="d-flex align-items-center gap-2 mb-4">
+              <img
+                src="Cocoricoach_logo.jpeg"
+                alt="Logo"
+                height="50"
+                class="rounded-circle footer-logo"
+              />
+              <h4 class="fw-bold text-white mb-0 tracking-wide">COCORICOACH</h4>
             </div>
-            <p class="text-white-50 small">Un écosystème, deux solutions pour la performance sportive.</p>
+            <p class="text-white-50 pe-xl-5 fs-6">
+              Solution complète et souveraine de gestion et d'optimisation de la
+              performance sportive.
+            </p>
           </div>
-          <div class="col-md-4 mb-3 text-center">
-            <h6 class="fw-bold mb-3">Contactez-nous</h6>
-            <a href="mailto:contact@cocoricoach.fr" class="text-white-50 text-decoration-none d-block mb-2">contact@cocoricoach.fr</a>
-            <a href="#" class="text-white-50 text-decoration-none d-block mb-2">WhatsApp & FAQ</a>
+          <div class="col-xl-2 col-md-4 col-sm-6">
+            <h6
+              class="fw-bold mb-4 text-uppercase tracking-wider text-white fs-6"
+            >
+              Solutions
+            </h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="page-cocoricoach.html"
+                  class="text-white-50 text-decoration-none"
+                  >Cocoricoach Independent</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="page-cocoricoach-club.html"
+                  class="text-white-50 text-decoration-none"
+                  >Cocoricoach Club Teams</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#pricing" class="text-white-50 text-decoration-none"
+                  >Tarifs</a
+                >
+              </li>
+            </ul>
           </div>
-          <div class="col-md-4 text-md-end">
-            <h6 class="fw-bold mb-3">Réseaux Sociaux</h6>
-            <a href="#" class="text-white fs-4 me-3"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="text-white fs-4 me-3"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="text-white fs-4"><i class="bi bi-linkedin"></i></a>
+          <div class="col-xl-2 col-md-4 col-sm-6">
+            <h6
+              class="fw-bold mb-4 text-uppercase tracking-wider text-white fs-6"
+            >
+              Ressources
+            </h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >FAQ Rapide</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="mailto:contact@cocoricoach.fr"
+                  class="text-white-50 text-decoration-none"
+                  >contact@cocoricoach.fr</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-xl-4 col-md-4 col-sm-12">
+            <h6
+              class="fw-bold mb-4 text-uppercase tracking-wider text-white fs-6"
+            >
+              Réseaux
+            </h6>
+            <div class="d-flex gap-3 mb-4 flex-wrap">
+              <a href="#" class="btn btn-outline-light rounded-circle"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="btn btn-outline-light rounded-circle"
+                ><i class="bi bi-instagram"></i
+              ></a>
+            </div>
+            <a
+              href="https://wa.me/33600000000"
+              target="_blank"
+              class="btn btn-success rounded-pill px-4 fw-bold shadow-md"
+            >
+              <i class="bi bi-whatsapp me-2 fs-5"></i> Canal WhatsApp
+            </a>
           </div>
         </div>
-        <hr class="border-secondary"/>
-        <div class="d-flex justify-content-between flex-wrap gap-2">
-          <p class="small text-white-50 mb-0">© 2026 Cocoricoach – Tous droits réservés.</p>
-          <div class="d-flex gap-3">
-            <a href="#" class="text-white-50 small text-decoration-none">Mentions légales</a>
-            <a href="#" class="text-white-50 small text-decoration-none">CGU</a>
-            <a href="#" class="text-white-50 small text-decoration-none">Politique de confidentialité</a>
+        <hr class="border-secondary opacity-25" />
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 mt-4 text-white-50 small"
+        >
+          <p class="mb-0">© 2026 Cocoricoach – Tous droits réservés.</p>
+          <div class="d-flex gap-3 flex-wrap justify-content-center">
+            <a href="#" class="text-white-50 text-decoration-none"
+              >Mentions légales</a
+            >
+            <a href="#" class="text-white-50 text-decoration-none">CGU / CGV</a>
+            <a href="#" class="text-white-50 text-decoration-none"
+              >Politique de confidentialité</a
+            >
           </div>
         </div>
       </div>
@@ -354,57 +669,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({ once: true, offset: 50 });
-      const SLIDE_DURATION = 7000;
-      const PAUSE_ON_INTERACT = 35000;
-      let currentSlide = 0;
-      let autoTimer = null;
-      const slides = document.querySelectorAll(".hero-slide");
-      const progressFill = document.getElementById("progressFill");
-      const videoClub = document.getElementById("video-club");
-
-      function showSlide(index) {
-        slides.forEach((s, i) => s.classList.toggle("active", i === index));
-        document.querySelectorAll('[aria-label="Slide 1"]').forEach((d) => d.classList.toggle("active", index === 0));
-        document.querySelectorAll('[aria-label="Slide 2"]').forEach((d) => d.classList.toggle("active", index === 1));
-        if (index === 1) { videoClub.play(); } else { videoClub.pause(); videoClub.currentTime = 0; }
-        currentSlide = index;
-        startProgress(SLIDE_DURATION);
-      }
-      function changeSlide(dir) {
-        const next = (currentSlide + dir + slides.length) % slides.length;
-        showSlide(next);
-        resetAutoTimer(PAUSE_ON_INTERACT);
-      }
-      function goToSlide(index) {
-        showSlide(index);
-        resetAutoTimer(PAUSE_ON_INTERACT);
-      }
-      function startProgress(duration) {
-        progressFill.style.transition = "none";
-        progressFill.style.width = "0%";
-        setTimeout(() => {
-          progressFill.style.transition = `width ${duration}ms linear`;
-          progressFill.style.width = "100%";
-        }, 50);
-      }
-      function resetAutoTimer(delay) {
-        clearInterval(autoTimer);
-        autoTimer = setInterval(() => showSlide((currentSlide + 1) % slides.length), delay || SLIDE_DURATION);
-        startProgress(delay || SLIDE_DURATION);
-      }
-      showSlide(0);
-      resetAutoTimer(SLIDE_DURATION);
-
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 50) { navbar.classList.add("bg-white", "shadow-sm"); navbar.classList.remove("glass-nav"); }
-        else { navbar.classList.remove("bg-white", "shadow-sm"); navbar.classList.add("glass-nav"); }
-      });
-      function toggleLang(btn) {
-        btn.textContent = btn.textContent === "FR | EN" ? "EN | FR" : "FR | EN";
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
