@@ -1,22 +1,20 @@
-/* ============ ARCHITECTURE DE CONFIGURATION BRANDING ============ */
+/* ============ ARCHITECTURE SAAS PREMIUM ============ */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 :root {
   --primary-blue: #0a2342;
   --primary-red: #c8102e;
-  --primary-dark: #0f172a; /* Noir/Gris très profond pour les textes */
-  --font-main: "Inter", sans-serif; /* Nouvelle police ultra-pro */
+  --primary-dark: #0f172a;
+  --font-main: "Inter", sans-serif;
   --transition-smooth: all 0.3s ease;
 }
 
-/* ============ UTILITIES & DEFAULTS ============ */
 body {
   font-family: var(--font-main);
   color: #334155;
   background-color: #f8fafc;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .py-6 {
@@ -31,9 +29,6 @@ body {
 .max-width-text {
   max-width: 750px;
 }
-.font-normal {
-  font-weight: 400;
-}
 
 /* ============ BOUTONS ============ */
 .btn {
@@ -45,22 +40,14 @@ body {
   border-color: var(--primary-blue);
   color: white;
 }
-.btn-france:hover,
-.btn-france:focus {
+.btn-france:hover {
   background-color: #051324 !important;
   color: white !important;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(10, 35, 66, 0.2);
 }
-.btn-danger {
-  background-color: var(--primary-red);
-  border-color: var(--primary-red);
-  color: white;
-}
-.btn-danger:hover,
-.btn-danger:focus {
+.btn-danger:hover {
   background-color: #940c22 !important;
-  color: white !important;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(200, 16, 46, 0.2);
 }
@@ -69,9 +56,9 @@ body {
 .glass-nav {
   background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 15px 0;
+  transition: var(--transition-smooth);
 }
 .glass-nav .nav-link {
   color: rgba(255, 255, 255, 0.9) !important;
@@ -88,19 +75,26 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* ============ HERO FIRSTBEAT (Portail Accueil) ============ */
+/* ============ PORTAIL ACCUEIL (RESPONSIVE SPLIT SCREEN) ============ */
 .portal-hero-container {
   height: 100vh;
   min-height: 650px;
   background-color: #000;
+  display: flex;
+  flex-direction: row; /* Desktop */
 }
+
 .portal-wing {
   height: 100%;
+  flex: 1; /* Prend 50% de l'espace sur PC */
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: width var(--transition-smooth);
+  transition: flex var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
 }
+
 .portal-bg-video,
 .hero-canvas-video {
   position: absolute;
@@ -112,62 +106,48 @@ body {
   object-fit: cover;
   z-index: 0;
 }
-.portal-overlay {
+
+/* Voile gris sombre élégant pour laisser voir la vidéo */
+.overlay-dark {
   position: absolute;
   inset: 0;
-  z-index: 1;
-  transition: var(--transition-smooth);
-}
-/* FINI LE FILTRE ROUGE OU BLEU OPAQUE : Un simple dégradé noir élégant */
-.overlay-blue,
-.overlay-red {
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.2) 0%,
-    rgba(0, 0, 0, 0.7) 100%
+    rgba(0, 0, 0, 0.8) 100%
   );
+  z-index: 1;
+  transition: var(--transition-smooth);
 }
 
 .portal-wing-content {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: 100%;
-  padding-top: 100px;
+  padding: 0 10%;
+  text-align: left;
 }
+
 .hero-headline {
   font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 1.1;
   letter-spacing: -0.04em;
 }
 
-@media (min-width: 1200px) {
-  .portal-hero-container .row {
-    display: flex;
-  }
-  .portal-wing {
-    width: 50%;
-  }
+/* Animation de largeur au survol sur PC */
+@media (min-width: 992px) {
   .portal-hero-container:hover .portal-wing:not(:hover) {
-    width: 45%;
+    flex: 0.85;
   }
   .portal-hero-container:hover .portal-wing:hover {
-    width: 55%;
+    flex: 1.15;
   }
-  .portal-wing:hover .portal-overlay {
+  .portal-wing:hover .overlay-dark {
     opacity: 0.6;
-  } /* Éclaircit la vidéo au survol */
+  }
 }
 
-/* ============ HERO DES PAGES APP ============ */
-.fullscreen-hero-canvas {
-  height: 70vh;
-  min-height: 500px;
-  display: flex;
-  align-items: center;
-}
-
-/* ============ EXPERTISE (Catapult Layout) ============ */
+/* ============ EXPERTISE & MOCKUPS ============ */
 .catapult-card {
   height: 400px;
   background-size: cover;
@@ -175,10 +155,6 @@ body {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-}
-.catapult-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
 }
 .catapult-gradient {
   position: absolute;
@@ -188,7 +164,6 @@ body {
     rgba(0, 0, 0, 0.9) 0%,
     rgba(0, 0, 0, 0) 60%
   );
-  z-index: 1;
 }
 .catapult-title {
   position: absolute;
@@ -198,35 +173,24 @@ body {
   color: white;
   font-weight: 700;
   font-size: 1.4rem;
-  letter-spacing: -0.02em;
   z-index: 2;
-  margin: 0;
-}
-.catapult-border {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  z-index: 3;
 }
 
-/* ============ IMAGES & MOCKUPS ============ */
+/* Images de l'application réelles (Bordure pro SaaS) */
 .dashboard-mockup {
-  border-radius: 16px;
+  border-radius: 12px;
   background: #ffffff;
-  overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  padding: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   transition: var(--transition-smooth);
 }
-.dashboard-mockup:hover {
-  transform: translateY(-4px);
-}
-.section-block-margin {
-  margin-bottom: 90px;
+.dashboard-mockup img {
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-/* ============ TARIFS ============ */
+/* ============ TARIFS RESPONSIVE ============ */
 .pricing-col-header {
   border-radius: 12px 12px 0 0;
 }
@@ -247,7 +211,6 @@ body {
   font-weight: 700;
   color: var(--primary-dark);
   font-size: 1.1rem;
-  letter-spacing: -0.01em;
 }
 .pricing-athlete-badges span {
   font-size: 0.75rem;
@@ -256,7 +219,7 @@ body {
   padding: 4px 10px;
   border-radius: 6px;
   border: 1px solid #e2e8f0;
-  margin-right: 5px;
+  margin: 4px 4px 0 0;
   display: inline-block;
 }
 .pricing-row-featured {
@@ -264,23 +227,9 @@ body {
   border: 2px solid var(--primary-blue) !important;
 }
 
-/* ============ TEMOIGNAGES & FOOTER ============ */
-.testimonial-card {
-  border: 1px solid #e2e8f0;
-  background: white;
-  transition: var(--transition-smooth);
-}
-.testimonial-card:hover {
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05) !important;
-}
-
+/* ============ MEDIA QUERIES (MOBILES & TABLETTES) ============ */
 @media (max-width: 991px) {
-  .py-6 {
-    padding: 60px 0;
-  }
-  .section-block-margin {
-    margin-bottom: 60px;
-  }
+  /* Navbar */
   .navbar-collapse {
     background: white;
     padding: 20px;
@@ -290,5 +239,41 @@ body {
   }
   .navbar-collapse .nav-link {
     color: var(--primary-dark) !important;
+  }
+
+  /* Split Screen devient Vertical sur mobile */
+  .portal-hero-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .portal-wing {
+    height: 60vh;
+    min-height: 500px;
+    width: 100%;
+  }
+  .portal-wing-content {
+    text-align: center !important;
+    padding: 0 5%;
+  }
+  .portal-wing-content .d-flex {
+    justify-content: center !important;
+  }
+
+  .py-6 {
+    padding: 60px 0;
+  }
+  .dashboard-mockup {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Ajustements pour les petits téléphones */
+  .pricing-row-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pricing-row-price {
+    margin-top: 10px;
   }
 }
