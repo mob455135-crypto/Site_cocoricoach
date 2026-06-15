@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
   const brandText = document.querySelector(".brand-text");
-
   if (navbar && navbar.classList.contains("fixed-top")) {
     if (window.scrollY > 50) {
       navbar.classList.add("bg-white", "shadow-sm");
