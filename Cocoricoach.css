@@ -236,7 +236,70 @@ body {
   border: 2px solid var(--primary-blue) !important;
 }
 
-/* ============ QUI SOMMES-NOUS PAGE ============ */
+/* ============ TARIFS PREMIUM (avec onglets) ============ */
+.pricing-premium-section {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #06162a 100%);
+}
+
+.pricing-tabs {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.pricing-tabs .nav-link {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  padding: 12px 28px;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+.pricing-tabs .nav-link:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+.pricing-tabs .nav-link.active {
+  background: white;
+  color: var(--primary-blue);
+  border-color: white;
+}
+
+.pricing-feature-list i {
+  font-size: 1.2rem;
+  vertical-align: -2px;
+}
+
+.pricing-glass-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+.pricing-glass-card-red {
+  border-color: rgba(200, 16, 46, 0.3);
+}
+
+.pricing-premium-section .pricing-row-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: transparent;
+}
+.pricing-premium-section .pricing-row-item:last-of-type {
+  border-bottom: none;
+}
+.pricing-premium-section .pricing-row-name {
+  color: white;
+}
+.pricing-premium-section .pricing-row-featured {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+}
+.pricing-premium-section .pricing-athlete-badges span {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+
 .founder-card {
   background: white;
   border-radius: 24px;
