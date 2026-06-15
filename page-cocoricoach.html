@@ -21,12 +21,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto fw-semibold">
-            <li class="nav-item"><a class="nav-link" href="index.html#accueil">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link active" href="page-cocoricoach.html">Espace Coachs</a></li>
-            <li class="nav-item"><a class="nav-link" href="page-cocoricoach-club.html">Espace Clubs</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html#pricing">Tarifs</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#accueil" data-i18n="nav-accueil">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link active" href="page-cocoricoach.html" data-i18n="nav-espacecoachs">Espace Coachs</a></li>
+            <li class="nav-item"><a class="nav-link" href="page-cocoricoach-club.html" data-i18n="nav-espaceclubs">Espace Clubs</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#pricing" data-i18n="nav-tarifs">Tarifs</a></li>
           </ul>
-          <div class="d-flex align-items-center mt-3 mt-xl-0">
+          <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+            <button class="btn btn-outline-dark btn-sm rounded-pill fw-bold px-3 border-2 lang-toggle-btn">EN</button>
             <a href="https://cocoricoach.com/" target="_blank" class="btn btn-primary rounded-pill px-4 btn-france btn-sm fw-bold">Login Coach</a>
           </div>
         </div>
@@ -41,11 +42,11 @@
       <div class="container-fluid px-4 px-lg-5 h-100 position-relative text-center" style="z-index: 3">
         <div class="row h-100 align-items-center justify-content-center">
           <div class="col-xl-9 col-lg-10" data-aos="fade-up">
-            <h1 class="display-3 fw-bold text-white mb-4">Passez de coach à véritable entrepreneur du sport.</h1>
-            <p class="lead text-white-50 mx-auto mb-5 max-width-text">
+            <h1 class="display-3 fw-bold text-white mb-4" data-i18n="coach-hero-title">Passez de coach à véritable entrepreneur du sport.</h1>
+            <p class="lead text-white-50 mx-auto mb-5 max-width-text" data-i18n="coach-hero-desc">
               Centralisez l'ensemble des outils nécessaires pour piloter un business de coaching moderne et suivez la performance de vos clients.
             </p>
-            <a href="https://cocoricoach.com/" target="_blank" class="btn btn-primary btn-lg rounded-pill px-5 fw-bold btn-france">Accéder à la plateforme</a>
+            <a href="https://cocoricoach.com/" target="_blank" class="btn btn-primary btn-lg rounded-pill px-5 fw-bold btn-france" data-i18n="coach-hero-cta">Accéder à la plateforme</a>
           </div>
         </div>
       </div>
@@ -57,14 +58,14 @@
         <!-- BLOC 1 — Bibliothèque d'exercices -->
         <div class="row align-items-center g-5 mb-5">
           <div class="col-xl-5 col-lg-6 pe-xl-5" data-aos="fade-right">
-            <h2 class="display-5 fw-bold text-primary-dark mb-4">Une bibliothèque d'exercices intégrée</h2>
-            <p class="fs-5 text-muted mb-4">
+            <h2 class="display-5 fw-bold text-primary-dark mb-4" data-i18n="coach-b1-title">Une bibliothèque d'exercices intégrée</h2>
+            <p class="fs-5 text-muted mb-4" data-i18n="coach-b1-desc">
               Fini les programmes sur feuilles volantes. Structurez vos séances grâce à une base de données visuelle et détaillée.
             </p>
             <ul class="list-unstyled fs-5 text-muted">
-              <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-3"></i> Filtres par niveau et groupes musculaires</li>
-              <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-3"></i> Fiches techniques complètes</li>
-              <li><i class="bi bi-check-circle-fill text-primary me-3"></i> Intégration directe dans le planning de l'athlète</li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-3"></i> <span data-i18n="coach-b1-li1">Filtres par niveau et groupes musculaires</span></li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-3"></i> <span data-i18n="coach-b1-li2">Fiches techniques complètes</span></li>
+              <li><i class="bi bi-check-circle-fill text-primary me-3"></i> <span data-i18n="coach-b1-li3">Intégration directe dans le planning de l\'athlète</span></li>
             </ul>
           </div>
           <div class="col-xl-7 col-lg-6" data-aos="fade-left">
@@ -77,14 +78,14 @@
         <!-- BLOC 2 — Calendrier -->
         <div class="row align-items-center g-5 flex-lg-row-reverse mb-5">
           <div class="col-xl-5 col-lg-6 ps-xl-5" data-aos="fade-left">
-            <h2 class="display-5 fw-bold text-primary-dark mb-4">Gestion centralisée des rendez-vous</h2>
-            <p class="fs-5 text-muted mb-4">
+            <h2 class="display-5 fw-bold text-primary-dark mb-4" data-i18n="coach-b2-title">Gestion centralisée des rendez-vous</h2>
+            <p class="fs-5 text-muted mb-4" data-i18n="coach-b2-desc">
               Organisez votre agenda de coaching personnel et la réservation de vos créneaux de salle en quelques clics.
             </p>
             <ul class="list-unstyled fs-5 text-muted">
-              <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-3"></i> Vue calendaire globale</li>
-              <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-3"></i> Réservation d'espaces</li>
-              <li><i class="bi bi-check-circle-fill text-primary me-3"></i> Synchronisation des clients</li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-3"></i> <span data-i18n="coach-b2-li1">Vue calendaire globale</span></li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-3"></i> <span data-i18n="coach-b2-li2">Réservation d\'espaces</span></li>
+              <li><i class="bi bi-check-circle-fill text-primary me-3"></i> <span data-i18n="coach-b2-li3">Synchronisation des clients</span></li>
             </ul>
           </div>
           <div class="col-xl-7 col-lg-6" data-aos="fade-right">
@@ -97,14 +98,14 @@
         <!-- BLOC 3 — Suivi de la progression -->
         <div class="row align-items-center g-5">
           <div class="col-xl-5 col-lg-6 pe-xl-5" data-aos="fade-right">
-            <h2 class="display-5 fw-bold text-primary-dark mb-4">Suivi de la progression athlète</h2>
-            <p class="fs-5 text-muted mb-4">
+            <h2 class="display-5 fw-bold text-primary-dark mb-4" data-i18n="coach-b3-title">Suivi de la progression athlète</h2>
+            <p class="fs-5 text-muted mb-4" data-i18n="coach-b3-desc">
               Visualisez l'évolution de vos athlètes test après test, et ajustez vos programmes en fonction de leurs résultats réels.
             </p>
             <ul class="list-unstyled fs-5 text-muted">
-              <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-3"></i> Historique complet des résultats de tests</li>
-              <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-3"></i> Filtres par catégorie (cardio, force, mobilité...)</li>
-              <li><i class="bi bi-check-circle-fill text-primary me-3"></i> Suivi de la progression dans le temps</li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-3"></i> <span data-i18n="coach-b3-li1">Historique complet des résultats de tests</span></li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-3"></i> <span data-i18n="coach-b3-li2">Filtres par catégorie (cardio, force, mobilité...)</span></li>
+              <li><i class="bi bi-check-circle-fill text-primary me-3"></i> <span data-i18n="coach-b3-li3">Suivi de la progression dans le temps</span></li>
             </ul>
           </div>
           <div class="col-xl-7 col-lg-6" data-aos="fade-left">
@@ -125,40 +126,40 @@
               <img src="Cocoricoach_logo.jpeg" alt="Logo" height="50" class="rounded-circle footer-logo"/>
               <h4 class="fw-bold text-white mb-0 tracking-wide">COCORICOACH</h4>
             </div>
-            <p class="text-white-50 pe-xl-5">Solution complète et souveraine de gestion et d'optimisation de la performance sportive.</p>
+            <p class="text-white-50 pe-xl-5" data-i18n="footer-tagline">Solution complète et souveraine de gestion et d'optimisation de la performance sportive.</p>
           </div>
           <div class="col-xl-2 col-md-4 col-sm-6">
-            <h6 class="fw-bold mb-4 text-uppercase tracking-wider text-white">Solutions</h6>
+            <h6 class="fw-bold mb-4 text-uppercase tracking-wider text-white" data-i18n="footer-solutions-title">Solutions</h6>
             <ul class="list-unstyled">
-              <li class="mb-2"><a href="page-cocoricoach.html" class="text-white-50 text-decoration-none">Cocoricoach Independent</a></li>
-              <li class="mb-2"><a href="page-cocoricoach-club.html" class="text-white-50 text-decoration-none">Cocoricoach Club</a></li>
+              <li class="mb-2"><a href="page-cocoricoach.html" class="text-white-50 text-decoration-none" data-i18n="footer-solutions-coach">Cocoricoach Independent</a></li>
+              <li class="mb-2"><a href="page-cocoricoach-club.html" class="text-white-50 text-decoration-none" data-i18n="footer-solutions-club">Cocoricoach Club</a></li>
             </ul>
           </div>
           <div class="col-xl-2 col-md-4 col-sm-6">
-            <h6 class="fw-bold mb-4 text-uppercase tracking-wider text-white">Ressources</h6>
+            <h6 class="fw-bold mb-4 text-uppercase tracking-wider text-white" data-i18n="footer-resources-title">Ressources</h6>
             <ul class="list-unstyled">
-              <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Documentation API</a></li>
+              <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none" data-i18n="footer-resources-doc">Documentation API</a></li>
               <li class="mb-2"><a href="mailto:contact@cocoricoach.fr" class="text-white-50 text-decoration-none">contact@cocoricoach.fr</a></li>
             </ul>
           </div>
           <div class="col-xl-4 col-md-4 col-sm-12 text-xl-end">
-            <h6 class="fw-bold mb-4 text-uppercase tracking-wider text-white">Réseaux</h6>
+            <h6 class="fw-bold mb-4 text-uppercase tracking-wider text-white" data-i18n="footer-networks-title">Réseaux</h6>
             <div class="d-flex gap-3 mb-4 justify-content-xl-end">
               <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-facebook"></i></a>
               <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-instagram"></i></a>
             </div>
             <a href="https://wa.me/33600000000" target="_blank" class="btn btn-success rounded-pill px-4 fw-bold">
-              <i class="bi bi-whatsapp me-2 fs-5"></i> Canal WhatsApp
+              <i class="bi bi-whatsapp me-2 fs-5"></i><span data-i18n="footer-whatsapp"> Canal WhatsApp</span>
             </a>
           </div>
         </div>
         <hr class="border-secondary opacity-25" />
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 mt-4 text-white-50 small">
-          <p class="mb-0">© 2026 Cocoricoach – Tous droits réservés.</p>
+          <p class="mb-0" data-i18n="footer-copyright">© 2026 Cocoricoach – Tous droits réservés.</p>
           <div class="d-flex gap-3 flex-wrap">
-            <a href="#" class="text-white-50 text-decoration-none">Mentions légales</a>
-            <a href="#" class="text-white-50 text-decoration-none">CGU / CGV</a>
-            <a href="#" class="text-white-50 text-decoration-none">Confidentialité</a>
+            <a href="#" class="text-white-50 text-decoration-none" data-i18n="footer-mentions">Mentions légales</a>
+            <a href="#" class="text-white-50 text-decoration-none" data-i18n="footer-cgu">CGU / CGV</a>
+            <a href="#" class="text-white-50 text-decoration-none" data-i18n="footer-confidentialite">Confidentialité</a>
           </div>
         </div>
       </div>
