@@ -81,12 +81,12 @@ body {
   min-height: 650px;
   background-color: #000;
   display: flex;
-  flex-direction: row; /* Desktop */
+  flex-direction: row;
 }
 
 .portal-wing {
   height: 100%;
-  flex: 1; /* Prend 50% de l'espace sur PC */
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,7 +107,6 @@ body {
   z-index: 0;
 }
 
-/* Voile gris sombre élégant pour laisser voir la vidéo */
 .overlay-dark {
   position: absolute;
   inset: 0;
@@ -134,7 +133,6 @@ body {
   letter-spacing: -0.04em;
 }
 
-/* Animation de largeur au survol sur PC */
 @media (min-width: 992px) {
   .portal-hero-container:hover .portal-wing:not(:hover) {
     flex: 0.85;
@@ -175,6 +173,15 @@ body {
   font-size: 1.4rem;
   z-index: 2;
 }
+/* Petite barre colorée en haut de chaque carte expertise */
+.catapult-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  z-index: 3;
+}
 
 /* Images de l'application réelles (Bordure pro SaaS) */
 .dashboard-mockup {
@@ -188,6 +195,8 @@ body {
 .dashboard-mockup img {
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.04);
+  width: 100%;
+  display: block;
 }
 
 /* ============ TARIFS RESPONSIVE ============ */
@@ -227,9 +236,73 @@ body {
   border: 2px solid var(--primary-blue) !important;
 }
 
+/* ============ QUI SOMMES-NOUS PAGE ============ */
+.founder-card {
+  background: white;
+  border-radius: 24px;
+  padding: 40px 32px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.founder-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+.founder-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: white;
+  margin: 0 auto;
+}
+.founder-avatar-blue {
+  background: linear-gradient(135deg, var(--primary-blue), #0040c1);
+}
+.founder-avatar-red {
+  background: linear-gradient(135deg, var(--primary-red), #c01b2a);
+}
+.solution-preview {
+  border-radius: 24px;
+  padding: 40px 32px;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+.solution-preview:hover {
+  transform: translateY(-6px);
+}
+.solution-preview-blue {
+  background: linear-gradient(135deg, var(--primary-blue), #0040c1);
+}
+.solution-preview-red {
+  background: linear-gradient(135deg, var(--primary-red), #c01b2a);
+}
+.solution-preview-icon {
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 16px;
+}
+.bento-red {
+  background: linear-gradient(135deg, var(--primary-red), #9c0c24) !important;
+}
+
+/* ============ FOOTER ============ */
+.footer-logo {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  object-fit: cover;
+}
+.hover-white:hover {
+  color: white !important;
+}
+
 /* ============ MEDIA QUERIES (MOBILES & TABLETTES) ============ */
 @media (max-width: 991px) {
-  /* Navbar */
   .navbar-collapse {
     background: white;
     padding: 20px;
@@ -241,7 +314,6 @@ body {
     color: var(--primary-dark) !important;
   }
 
-  /* Split Screen devient Vertical sur mobile */
   .portal-hero-container {
     flex-direction: column;
     height: auto;
@@ -268,7 +340,6 @@ body {
 }
 
 @media (max-width: 576px) {
-  /* Ajustements pour les petits téléphones */
   .pricing-row-item {
     flex-direction: column;
     align-items: flex-start;
