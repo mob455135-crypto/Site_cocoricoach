@@ -410,8 +410,24 @@ const translations = {
     "club-b6-li2": "Filters by category (cardio, strength, mobility...)",
     "club-b6-li3": "Individual progress tracking over time",
   },
-};function getCurrentLang() {
-  return localStorage.getItem("cocoricoach-lang") || "fr";
+};// Stockage de la langue avec repli si localStorage est bloqué (ex: file://)
+let memoryLang = "fr";
+
+function getCurrentLang() {
+  try {
+    return localStorage.getItem("cocoricoach-lang") || memoryLang;
+  } catch (e) {
+    return memoryLang;
+  }
+}
+
+function saveLang(lang) {
+  memoryLang = lang;
+  try {
+    localStorage.setItem("cocoricoach-lang", lang);
+  } catch (e) {
+    // localStorage indisponible (ex: ouverture en file://), on garde juste en mémoire
+  }
 }
 
 function applyLanguage(lang) {
@@ -431,7 +447,7 @@ function applyLanguage(lang) {
   });
 
   document.documentElement.setAttribute("lang", lang);
-  localStorage.setItem("cocoricoach-lang", lang);
+  saveLang(lang);
 }
 
 function toggleLanguage() {
