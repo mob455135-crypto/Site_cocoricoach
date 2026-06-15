@@ -139,69 +139,114 @@
       </div>
     </section>
 
-    <section id="pricing" class="py-6 bg-light border-bottom">
+    <section id="pricing" class="py-6 pricing-premium-section text-white">
       <div class="container-fluid px-4 px-lg-5">
         <div class="text-center mb-5 mx-auto" data-aos="fade-up">
-          <h2 class="display-5 fw-bold text-primary-dark" data-i18n="pricing-title">Des Grilles Tarifaires Claires</h2>
+          <h2 class="display-5 fw-bold text-white" data-i18n="pricing-title">Une offre pensée pour votre profil</h2>
+          <p class="text-white-50 fs-5 mx-auto max-width-text" data-i18n="pricing-subtitle">Cocoricoach et Cocoricoach Club répondent à deux besoins différents. Choisissez votre profil pour découvrir l'offre adaptée.</p>
         </div>
-        <div class="row g-4 justify-content-center align-items-stretch">
-          <div class="col-xl-6 col-lg-12" data-aos="fade-right">
-            <div class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden">
-              <div class="pricing-col-header bg-primary p-4 text-white">
-                <h3 class="fw-bold fs-4 mb-0"><i class="bi bi-person-fill me-2"></i><span data-i18n="pricing-coach-name">Cocoricoach</span></h3>
-                <p class="mb-0 text-white-50 small" data-i18n="pricing-coach-sub">Coachs & structures indépendantes</p>
+
+        <!-- Toggle profils -->
+        <ul class="nav nav-pills pricing-tabs justify-content-center mb-5 mx-auto" id="pricing-tab" role="tablist" data-aos="zoom-in">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pricing-coach" type="button">
+              <i class="bi bi-person-fill me-2"></i><span data-i18n="pricing-tab-coach">Voir les offres Coachs & Salles</span>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pricing-club" type="button">
+              <i class="bi bi-shield-fill me-2"></i><span data-i18n="pricing-tab-club">Voir les offres Clubs</span>
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+
+          <!-- ============ ONGLET COACH ============ -->
+          <div class="tab-pane fade show active" id="pricing-coach" role="tabpanel">
+            <div class="row g-5 align-items-center">
+              <div class="col-xl-5 col-lg-6" data-aos="fade-right">
+                <span class="badge bg-primary rounded-pill px-3 py-2 mb-3 text-uppercase tracking-wide" data-i18n="pricing-coach-name">Cocoricoach</span>
+                <h3 class="display-6 fw-bold mb-3" data-i18n="pricing-coach-heading">L'outil tout-en-un des coachs & salles indépendantes</h3>
+                <p class="fs-5 text-white-50 mb-4" data-i18n="pricing-coach-intro">
+                  Soyez visible sans créer de site internet, créez vos séances en quelques clics, suivez vos athlètes, vendez vos programmes, gérez votre salle et pilotez votre business — tout depuis une seule plateforme.
+                </p>
+                <ul class="list-unstyled text-white-50 fs-6 pricing-feature-list">
+                  <li class="mb-3"><i class="bi bi-geo-alt-fill text-primary me-3"></i> <span data-i18n="pricing-coach-feat1">Référencement automatique sur la carte Cocoricoach</span></li>
+                  <li class="mb-3"><i class="bi bi-clipboard2-pulse-fill text-primary me-3"></i> <span data-i18n="pricing-coach-feat2">Création de séances avancées (superset, EMOM, AMRAP...)</span></li>
+                  <li class="mb-3"><i class="bi bi-calendar-check-fill text-primary me-3"></i> <span data-i18n="pricing-coach-feat3">Gestion de salle, planning & réservations</span></li>
+                  <li class="mb-3"><i class="bi bi-person-lines-fill text-primary me-3"></i> <span data-i18n="pricing-coach-feat4">Suivi personnalisé coach / athlète</span></li>
+                  <li class="mb-3"><i class="bi bi-wallet-fill text-primary me-3"></i> <span data-i18n="pricing-coach-feat5">Vente de programmes et ebooks en ligne</span></li>
+                  <li><i class="bi bi-graph-up-arrow text-primary me-3"></i> <span data-i18n="pricing-coach-feat6">Tableau de bord business (MRR, churn, rétention)</span></li>
+                </ul>
               </div>
-              <div class="card-body p-0">
-                <div class="pricing-row-item">
-                  <div>
-                    <div class="pricing-row-name" data-i18n="pricing-suivi-title">Suivi personnalisé seul</div>
-                    <div class="pricing-athlete-badges">
-                      <span data-i18n="pricing-badge-9">Jusqu'à 9 : <strong>15€</strong>/m</span>
-                      <span data-i18n="pricing-badge-19">9 à 19 : <strong>25€</strong>/m</span>
-                      <span data-i18n="pricing-badge-20">+20 : <strong>35€</strong>/m</span>
+
+              <div class="col-xl-7 col-lg-6" data-aos="fade-left">
+                <div class="pricing-glass-card overflow-hidden">
+                  <div class="pricing-row-item">
+                    <div>
+                      <div class="pricing-row-name" data-i18n="pricing-suivi-title">Suivi personnalisé seul</div>
+                      <div class="pricing-athlete-badges">
+                        <span data-i18n="pricing-badge-9">Jusqu'à 9 : <strong>15€</strong>/m</span>
+                        <span data-i18n="pricing-badge-19">9 à 19 : <strong>25€</strong>/m</span>
+                        <span data-i18n="pricing-badge-20">+20 : <strong>35€</strong>/m</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="pricing-row-item">
-                  <div><div class="pricing-row-name" data-i18n="pricing-suiviprog-title">Suivi + Programme</div></div>
-                  <div class="fs-4 fw-bold text-primary">50€<span class="fs-6 text-muted font-normal">/m</span></div>
-                </div>
-                <div class="pricing-row-item pricing-row-featured p-4">
-                  <div>
-                    <div class="pricing-row-name text-primary-dark" data-i18n="pricing-pack-title">Pack Complet Premium</div>
-                    <div class="text-muted small" data-i18n="pricing-pack-desc">Salles + réservation + programmes + suivi complet</div>
+                  <div class="pricing-row-item">
+                    <div><div class="pricing-row-name" data-i18n="pricing-suiviprog-title">Suivi + Programme</div></div>
+                    <div class="fs-4 fw-bold text-white">50€<span class="fs-6 text-white-50 font-normal">/m</span></div>
                   </div>
-                  <div class="fs-3 fw-bold text-primary">100€<span class="fs-6 text-muted font-normal">/m</span></div>
+                  <div class="pricing-row-item pricing-row-featured p-4">
+                    <div>
+                      <div class="pricing-row-name" data-i18n="pricing-pack-title">Pack Complet Premium</div>
+                      <div class="text-white-50 small" data-i18n="pricing-pack-desc">Salles + réservation + programmes + suivi complet</div>
+                    </div>
+                    <div class="fs-3 fw-bold text-white">100€<span class="fs-6 text-white-50 font-normal">/m</span></div>
+                  </div>
+                  <div class="p-4 text-center">
+                    <a href="#contact" class="btn btn-primary btn-france rounded-pill px-5 py-2 fw-bold" data-i18n="pricing-coach-cta">Commencer avec Cocoricoach</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-xl-6 col-lg-12" data-aos="fade-left">
-            <div class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden">
-              <div class="pricing-col-header bg-danger p-4 text-white">
-                <h3 class="fw-bold fs-4 mb-0"><i class="bi bi-shield-fill me-2"></i><span data-i18n="pricing-club-name">Cocoricoach Club</span></h3>
-                <p class="mb-0 text-white-50 small" data-i18n="pricing-club-sub">Clubs & organisations sportives</p>
+          <!-- ============ ONGLET CLUB ============ -->
+          <div class="tab-pane fade" id="pricing-club" role="tabpanel">
+            <div class="row g-5 align-items-center">
+              <div class="col-xl-5 col-lg-6" data-aos="fade-right">
+                <span class="badge bg-danger rounded-pill px-3 py-2 mb-3 text-uppercase tracking-wide" data-i18n="pricing-club-name">Cocoricoach Club</span>
+                <h3 class="display-6 fw-bold mb-3" data-i18n="pricing-club-heading">Le pilotage complet de la performance collective</h3>
+                <p class="fs-5 text-white-50 mb-4" data-i18n="pricing-club-intro">
+                  Planification de saison, suivi de charge et de récupération (RPE / HRV), comparaison d'athlètes, calendrier partagé, banque d'exercices commune et suivi individuel des tests physiques — tout pour aligner votre staff.
+                </p>
+                <ul class="list-unstyled text-white-50 fs-6 pricing-feature-list">
+                  <li class="mb-3"><i class="bi bi-calendar3 text-danger me-3"></i> <span data-i18n="pricing-club-feat1">Planification macro et micro-cycles sur l'année</span></li>
+                  <li class="mb-3"><i class="bi bi-activity text-danger me-3"></i> <span data-i18n="pricing-club-feat2">Suivi de charge RPE et récupération HRV</span></li>
+                  <li class="mb-3"><i class="bi bi-bullseye text-danger me-3"></i> <span data-i18n="pricing-club-feat3">Comparaison des athlètes sur radars de performance</span></li>
+                  <li class="mb-3"><i class="bi bi-calendar2-week-fill text-danger me-3"></i> <span data-i18n="pricing-club-feat4">Calendrier collectif partagé par tout le staff</span></li>
+                  <li class="mb-3"><i class="bi bi-collection-fill text-danger me-3"></i> <span data-i18n="pricing-club-feat5">Banque d'exercices commune au staff</span></li>
+                  <li><i class="bi bi-clipboard2-data-fill text-danger me-3"></i> <span data-i18n="pricing-club-feat6">Suivi individuel des tests physiques</span></li>
+                </ul>
               </div>
-              <div class="p-5 bg-white d-flex flex-column h-100 justify-content-between">
-                <div>
-                  <div class="d-flex align-items-center justify-content-between flex-wrap mb-4">
-                    <div class="fs-1 text-danger"><i class="bi bi-trophy-fill"></i></div>
-                    <div class="text-xl-end text-start">
-                      <h4 class="display-5 fw-bold text-danger mb-0">75€<span class="fs-5 text-muted fw-normal">/mois</span></h4>
-                      <p class="text-success small fw-bold mb-0" data-i18n="pricing-club-promo">Ou 800€ en paiement unique annuel</p>
-                    </div>
-                  </div>
-                  <ul class="list-unstyled text-muted fs-6 mb-4">
-                    <li class="mb-3"><i class="bi bi-check-circle-fill text-danger me-2"></i> <span data-i18n="pricing-club-li1">Gestion de la performance collective</span></li>
-                    <li class="mb-3"><i class="bi bi-check-circle-fill text-danger me-2"></i> <span data-i18n="pricing-club-li2">Suivi athlétique, médical et charges</span></li>
+
+              <div class="col-xl-7 col-lg-6" data-aos="fade-left">
+                <div class="pricing-glass-card pricing-glass-card-red p-5 text-center">
+                  <div class="fs-1 text-danger mb-3"><i class="bi bi-trophy-fill"></i></div>
+                  <h4 class="display-5 fw-bold text-white mb-1">75€<span class="fs-5 text-white-50 fw-normal">/mois</span></h4>
+                  <p class="text-success fw-bold mb-4" data-i18n="pricing-club-promo">Ou 800€ en paiement unique annuel</p>
+                  <ul class="list-unstyled text-white-50 fs-6 mb-4 text-start mx-auto" style="max-width:380px">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> <span data-i18n="pricing-club-li1">Gestion de la performance collective</span></li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> <span data-i18n="pricing-club-li2">Suivi athlétique, médical et charges</span></li>
                     <li><i class="bi bi-check-circle-fill text-danger me-2"></i> <span data-i18n="pricing-club-li3">Communication instantanée du staff</span></li>
                   </ul>
+                  <a href="#contact" class="btn btn-danger rounded-pill px-5 py-3 fw-bold" data-i18n="pricing-club-cta">Demander un devis structure</a>
                 </div>
-                <a href="#contact" class="btn btn-danger rounded-pill w-100 py-3 fw-bold" data-i18n="pricing-club-cta">Demander un devis structure</a>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
