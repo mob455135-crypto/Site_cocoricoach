@@ -147,33 +147,50 @@ body {
 
 /* ============ EXPERTISE & MOCKUPS ============ */
 .catapult-card {
-  height: 400px;
+  height: 460px;
   background-size: cover;
   background-position: center;
   position: relative;
-  border-radius: 12px;
+  border-radius: 18px;
   overflow: hidden;
+  cursor: pointer;
+  transform: translateY(0);
+  transition: transform 0.38s ease, box-shadow 0.38s ease;
+}
+.catapult-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 28px 56px rgba(0, 0, 0, 0.28) !important;
+}
+.catapult-card:hover .catapult-gradient {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.15) 70%);
 }
 .catapult-gradient {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0) 60%
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0) 65%
   );
+  transition: background 0.38s ease;
 }
 .catapult-title {
   position: absolute;
-  bottom: 25px;
-  left: 25px;
-  right: 25px;
+  bottom: 28px;
+  left: 28px;
+  right: 28px;
   color: white;
-  font-weight: 700;
-  font-size: 1.4rem;
+  font-weight: 800;
+  font-size: 1.45rem;
   z-index: 2;
+  letter-spacing: 0.06em;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6);
+  transition: bottom 0.3s ease;
 }
-/* Petite barre colorée en haut de chaque carte expertise */
+.catapult-card:hover .catapult-title {
+  bottom: 34px;
+}
+/* Barre colorée premium en haut de chaque carte */
 .catapult-border {
   position: absolute;
   top: 0;
@@ -185,16 +202,24 @@ body {
 
 /* Images de l'application réelles (Bordure pro SaaS) */
 .dashboard-mockup {
-  border-radius: 12px;
-  background: #ffffff;
-  padding: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #eef2ff, #ffffff);
+  padding: 10px;
+  border: 1px solid rgba(10, 35, 66, 0.1);
+  box-shadow:
+    0 40px 80px rgba(10, 35, 66, 0.14),
+    0 0 0 1px rgba(10, 35, 66, 0.04);
   transition: var(--transition-smooth);
 }
+.dashboard-mockup:hover {
+  box-shadow:
+    0 55px 100px rgba(10, 35, 66, 0.2),
+    0 0 0 1px rgba(10, 35, 66, 0.07);
+  transform: translateY(-5px);
+}
 .dashboard-mockup img {
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+  border: 1px solid rgba(10, 35, 66, 0.06);
   width: 100%;
   display: block;
 }
@@ -382,8 +407,8 @@ body {
     height: auto;
   }
   .portal-wing {
-    height: 60vh;
-    min-height: 500px;
+    height: 55vh;
+    min-height: 460px;
     width: 100%;
   }
   .portal-wing-content {
@@ -410,4 +435,130 @@ body {
   .pricing-row-price {
     margin-top: 10px;
   }
+  .portal-wing {
+    min-height: 420px;
+    height: 50vh;
+  }
+  .hero-headline {
+    font-size: clamp(1.55rem, 7.5vw, 2.4rem);
+  }
+  .catapult-card {
+    height: 320px;
+  }
+  .catapult-title {
+    font-size: 1.2rem;
+    letter-spacing: 0.03em;
+  }
+  .py-6 {
+    padding: 52px 0;
+  }
+  .display-3 {
+    font-size: 2.1rem !important;
+  }
+}
+
+/* =================================================================
+   AMÉLIORATIONS PREMIUM – PHASE OPTIMISATION
+   ================================================================= */
+
+/* Hero full-screen (pages produits) — correction hauteur manquante */
+.fullscreen-hero-canvas {
+  height: 100vh;
+  min-height: 600px;
+  background-color: #000;
+}
+@media (max-width: 991px) {
+  .fullscreen-hero-canvas {
+    min-height: 100svh;
+  }
+}
+
+/* Tracking-wider (footer) */
+.tracking-wider {
+  letter-spacing: 0.08em;
+}
+
+/* ============ NAVBAR – HOVER UNDERLINE PREMIUM ============ */
+.glass-nav .nav-link {
+  position: relative;
+}
+.glass-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.85);
+  transition: width 0.25s ease;
+  border-radius: 2px;
+}
+.glass-nav .nav-link:hover::after {
+  width: 68%;
+}
+.navbar.bg-white .nav-link {
+  color: var(--primary-dark) !important;
+  position: relative;
+}
+.navbar.bg-white .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--primary-blue);
+  transition: width 0.25s ease;
+  border-radius: 2px;
+}
+.navbar.bg-white .nav-link:hover::after {
+  width: 68%;
+}
+
+/* ============ TESTIMONIALS – ACCENT PREMIUM ============ */
+.testimonial-card {
+  border-left: 4px solid transparent !important;
+  transition: all 0.35s ease !important;
+}
+.testimonial-card:hover {
+  border-left-color: var(--primary-red) !important;
+  transform: translateY(-7px);
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.1) !important;
+}
+.testimonial-card .fst-italic {
+  line-height: 1.75;
+}
+
+/* ============ PRICING GLASS – HOVER ============ */
+.pricing-glass-card {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.pricing-glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 26px 52px rgba(0, 0, 0, 0.28);
+}
+
+/* ============ STATS – SÉPARATEUR GRADIENT ============ */
+.stat-divider {
+  width: 36px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-blue), var(--primary-red));
+  border-radius: 2px;
+  margin: 10px auto 10px;
+}
+
+/* ============ BOUTON LOGIN – ÉPAISSEUR PREMIUM ============ */
+.btn-france,
+.btn-danger {
+  font-size: 0.875rem;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  letter-spacing: 0.01em;
+}
+.btn-lg.btn-france,
+.btn-lg.btn-danger {
+  padding: 14px 38px;
+  font-size: 1rem;
 }

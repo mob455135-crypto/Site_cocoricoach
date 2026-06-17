@@ -38,15 +38,15 @@ const translations = {
   fr: {
     // ---- NAVBAR ----
     "nav-accueil": "Accueil",
-    "nav-expertise": "Expertise",
-    "nav-ladata": "La Data",
-    "nav-tarifs": "Tarifs",
-    "nav-temoignages": "Témoignages",
-    "nav-espacecoachs": "Espace Coachs",
-    "nav-espaceclubs": "Espace Clubs",
+    "nav-expertise": "Nos Atouts",
+    "nav-ladata": "La Plateforme",
+    "nav-tarifs": "Nos Offres",
+    "nav-temoignages": "Avis Clients",
+    "nav-espacecoachs": "Coachs & Salles",
+    "nav-espaceclubs": "Clubs Professionnels",
     "nav-solutions": "Solutions",
     "nav-contact": "Contact",
-    "nav-quisommesnous": "Qui sommes-nous ?",
+    "nav-quisommesnous": "Notre Histoire",
 
     // ---- HERO ACCUEIL (split screen) ----
     "home-badge-coach": "Indépendants & Salles",
@@ -112,7 +112,7 @@ const translations = {
     "pricing-club-feat4": "Calendrier collectif partagé par tout le staff",
     "pricing-club-feat5": "Banque d'exercices commune au staff",
     "pricing-club-feat6": "Suivi individuel des tests physiques",
-    "pricing-club-promo": "Ou 800€ en paiement unique annuel",
+    "pricing-club-promo": "",
     "pricing-club-li1": "Gestion de la performance collective",
     "pricing-club-li2": "Suivi athlétique, médical et charges",
     "pricing-club-li3": "Communication instantanée du staff",
@@ -247,15 +247,15 @@ const translations = {
   en: {
     // ---- NAVBAR ----
     "nav-accueil": "Home",
-    "nav-expertise": "Expertise",
-    "nav-ladata": "Data",
-    "nav-tarifs": "Pricing",
-    "nav-temoignages": "Testimonials",
-    "nav-espacecoachs": "Coach Space",
-    "nav-espaceclubs": "Club Space",
+    "nav-expertise": "Our Strengths",
+    "nav-ladata": "The Platform",
+    "nav-tarifs": "Our Plans",
+    "nav-temoignages": "Client Reviews",
+    "nav-espacecoachs": "Coaches & Gyms",
+    "nav-espaceclubs": "Pro Clubs",
     "nav-solutions": "Solutions",
     "nav-contact": "Contact",
-    "nav-quisommesnous": "About Us",
+    "nav-quisommesnous": "Our Story",
 
     // ---- HERO ACCUEIL (split screen) ----
     "home-badge-coach": "Independents & Gyms",
@@ -321,7 +321,7 @@ const translations = {
     "pricing-club-feat4": "Collective calendar shared across the staff",
     "pricing-club-feat5": "Exercise bank shared by the staff",
     "pricing-club-feat6": "Individual physical test tracking",
-    "pricing-club-promo": "Or €800 as a one-time annual payment",
+    "pricing-club-promo": "",
     "pricing-club-li1": "Collective performance management",
     "pricing-club-li2": "Athletic, medical and load tracking",
     "pricing-club-li3": "Instant staff communication",
