@@ -65,7 +65,7 @@ const translations = {
     "stats-satisfaction": "Taux de Satisfaction",
 
     // ---- EXPERTISE ----
-    "expertise-title": "Nos Domaines d'Expertise",
+    "expertise-title": "Nos Atouts — Ce que nous maîtrisons",
     "expertise-athlete": "SUIVI DE L'ATHLÈTE",
     "expertise-data": "DATA & ANALYTICS",
     "expertise-planning": "PLANIFICATION",
@@ -188,11 +188,11 @@ const translations = {
     "qsn-footer-networks-title": "Réseaux Sociaux",
 
     // ---- PAGE COACH - BLOCS DETAILLES ----
-    "coach-b1-title": "Soyez visible, sans créer de site internet",
-    "coach-b1-desc": "Votre profil apparaît automatiquement sur la carte Cocoricoach. Athlètes, clubs et salles vous trouvent selon leur localisation, leurs objectifs et le type de structure recherché — sans que vous ayez à créer ou gérer un site.",
-    "coach-b1-li1": "Profil public avec vos programmes et offres",
-    "coach-b1-li2": "Recherche par localisation, type de structure et objectif",
-    "coach-b1-li3": "Visibilité boostée avec le badge Premium",
+    "coach-b1-title": "Votre page pro, visible — sans créer de site",
+    "coach-b1-desc": "Créez votre page coach en quelques minutes et soyez immédiatement référencé sur la carte interactive Cocoricoach. Vos clients vous trouvent selon leur localisation, leurs objectifs et le type de structure recherché — aucune compétence technique requise.",
+    "coach-b1-li1": "Page coach complète avec vos programmes et tarifs",
+    "coach-b1-li2": "Référencement géolocalisé : trouvez et soyez trouvé",
+    "coach-b1-li3": "Visibilité boostée avec le badge Coach Premium",
 
     "coach-b2-title": "Créez des séances sur-mesure en quelques clics",
     "coach-b2-desc": "Construisez vos entraînements bloc par bloc : séries simples, supersets, circuits, EMOM, AMRAP... Toutes les méthodes d'entraînement sont à portée de clic.",
@@ -242,6 +242,36 @@ const translations = {
     "club-b6-li1": "Historique complet des résultats de tests",
     "club-b6-li2": "Filtres par catégorie (cardio, force, mobilité...)",
     "club-b6-li3": "Suivi de la progression individuelle dans le temps",
+
+    "club-b7-title": "Analyse en temps réel de vos rencontres",
+    "club-b7-desc": "Suivez et annotez les données de chaque match en direct depuis l'interface Club. Prenez des décisions tactiques éclairées grâce à des métriques actualisées à chaque instant.",
+    "club-b7-li1": "Saisie des événements de match en temps réel",
+    "club-b7-li2": "Métriques d'intensité et de volume actualisées en continu",
+    "club-b7-li3": "Rapport de performance post-rencontre automatique",
+
+    "club-b8-title": "Créez votre propre batterie de tests",
+    "club-b8-desc": "Configurez vos protocoles d'évaluation physique sur mesure et standardisez les sessions de tests au sein de votre staff. Reproduisez les conditions identiques à chaque évaluation.",
+    "club-b8-li1": "Construction de protocoles d'évaluation personnalisés",
+    "club-b8-li2": "Attribution des batteries de tests à vos groupes d'athlètes",
+    "club-b8-li3": "Comparaisons automatisées et historique des performances",
+
+    "club-b9-title": "Importation de fichiers GPS",
+    "club-b9-desc": "Intégrez vos données de tracking GPS directement dans la plateforme. Enrichissez vos analyses de charge externe pour une vision 360° de la préparation physique de vos athlètes.",
+    "club-b9-li1": "Compatible avec les principaux formats GPS du marché",
+    "club-b9-li2": "Visualisation des charges externes, distances et intensités",
+    "club-b9-li3": "Données GPS intégrées aux profils individuels des athlètes",
+
+    "club-b10-title": "Un espace dédié pour chaque athlète",
+    "club-b10-desc": "Chaque sportif dispose de son propre espace sécurisé pour consulter ses programmes, visualiser ses données de progression et communiquer directement avec le staff.",
+    "club-b10-li1": "Accès personnel et sécurisé pour chaque athlète",
+    "club-b10-li2": "Consultation des programmes et séances assignées",
+    "club-b10-li3": "Messagerie directe avec le staff technique et médical",
+
+    "coach-b4-title": "Centralisez toutes les données de votre structure",
+    "coach-b4-desc": "Regroupez sur une seule plateforme les profils de vos athlètes, vos plannings, vos résultats de séances et vos indicateurs de performance. Fini les tableurs éparpillés — tout est synchronisé et accessible partout, à tout moment.",
+    "coach-b4-li1": "Données athlètes, séances et progressions en un seul endroit",
+    "coach-b4-li2": "Synchronisation en temps réel sur tous vos appareils",
+    "coach-b4-li3": "Rapports de suivi exportables en un clic",
   },
 
   en: {
@@ -274,7 +304,7 @@ const translations = {
     "stats-satisfaction": "Satisfaction Rate",
 
     // ---- EXPERTISE ----
-    "expertise-title": "Our Areas of Expertise",
+    "expertise-title": "Our Strengths — What We Master",
     "expertise-athlete": "ATHLETE TRACKING",
     "expertise-data": "DATA & ANALYTICS",
     "expertise-planning": "PLANNING",
@@ -397,11 +427,11 @@ const translations = {
     "qsn-footer-networks-title": "Social Media",
 
     // ---- COACH PAGE - DETAILED BLOCKS ----
-    "coach-b1-title": "Get found, without building a website",
-    "coach-b1-desc": "Your profile automatically appears on the Cocoricoach map. Athletes, clubs and gyms find you based on location, goals and the type of structure they're looking for — with no website to build or maintain.",
-    "coach-b1-li1": "Public profile with your programs and offers",
-    "coach-b1-li2": "Search by location, structure type and goal",
-    "coach-b1-li3": "Boosted visibility with the Premium badge",
+    "coach-b1-title": "Your pro page, live — without building a website",
+    "coach-b1-desc": "Create your coach page in minutes and get instantly listed on the Cocoricoach interactive map. Clients find you based on location, goals and the type of structure they are looking for — no technical skills required.",
+    "coach-b1-li1": "Complete coach page with your programs and pricing",
+    "coach-b1-li2": "Geo-located listing: find and be found",
+    "coach-b1-li3": "Boosted visibility with the Premium Coach badge",
 
     "coach-b2-title": "Build custom sessions in just a few clicks",
     "coach-b2-desc": "Build your workouts block by block: straight sets, supersets, circuits, EMOM, AMRAP... every training method is just a click away.",
@@ -451,6 +481,36 @@ const translations = {
     "club-b6-li1": "Complete history of test results",
     "club-b6-li2": "Filters by category (cardio, strength, mobility...)",
     "club-b6-li3": "Individual progress tracking over time",
+
+    "club-b7-title": "Real-time match analysis",
+    "club-b7-desc": "Track and annotate match data live from the Club interface. Make informed tactical decisions with metrics updated at every moment.",
+    "club-b7-li1": "Live match event logging",
+    "club-b7-li2": "Intensity and volume metrics updated in real time",
+    "club-b7-li3": "Automatic post-match performance report",
+
+    "club-b8-title": "Build your own test battery",
+    "club-b8-desc": "Configure custom physical evaluation protocols and standardize testing sessions across your entire staff. Reproduce identical conditions at every evaluation.",
+    "club-b8-li1": "Build custom evaluation protocols",
+    "club-b8-li2": "Assign test batteries to your athlete groups",
+    "club-b8-li3": "Automated comparisons and performance history",
+
+    "club-b9-title": "GPS file import",
+    "club-b9-desc": "Integrate your GPS tracking data directly into the platform. Enrich your external load analyses for a 360° view of your athletes' physical preparation.",
+    "club-b9-li1": "Compatible with the leading GPS formats on the market",
+    "club-b9-li2": "Visualization of external loads, distances and intensities",
+    "club-b9-li3": "GPS data integrated into individual athlete profiles",
+
+    "club-b10-title": "A dedicated space for every athlete",
+    "club-b10-desc": "Every athlete has their own secure personal space to view their programs, check their progress data and communicate directly with the staff.",
+    "club-b10-li1": "Personal, secure access for every athlete",
+    "club-b10-li2": "View assigned programs and sessions",
+    "club-b10-li3": "Direct messaging with the technical and medical staff",
+
+    "coach-b4-title": "Centralize all your structure's data",
+    "coach-b4-desc": "Bring your athletes' profiles, schedules, session results and performance indicators onto one single platform. No more scattered spreadsheets — everything is synced and accessible anywhere, anytime.",
+    "coach-b4-li1": "Athlete data, sessions and progress in one place",
+    "coach-b4-li2": "Real-time sync across all your devices",
+    "coach-b4-li3": "Exportable tracking reports in one click",
   },
 };// Stockage de la langue avec repli si localStorage est bloqué (ex: file://)
 let memoryLang = "fr";
