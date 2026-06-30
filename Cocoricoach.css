@@ -566,6 +566,38 @@ body {
   margin: 10px auto 10px;
 }
 
+/* ============ FEATURE MINI-CARDS (grille 4 captures) ============ */
+.feature-mini-mockup {
+  background: linear-gradient(145deg, #eef2ff, #ffffff);
+  border: 1px solid rgba(10, 35, 66, 0.1);
+  border-radius: 14px;
+  padding: 8px 8px 12px;
+  box-shadow: 0 8px 24px rgba(10, 35, 66, 0.08);
+  transition: var(--transition-smooth);
+  text-align: center;
+  height: 100%;
+}
+.feature-mini-mockup:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 42px rgba(10, 35, 66, 0.14);
+  border-color: rgba(10, 35, 66, 0.18);
+}
+.feature-mini-mockup img {
+  border-radius: 8px;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+.feature-mini-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary-dark);
+  margin: 0;
+  opacity: 0.75;
+}
+
 /* ============ BOUTON LOGIN – ÉPAISSEUR PREMIUM ============ */
 .btn-france,
 .btn-danger {
