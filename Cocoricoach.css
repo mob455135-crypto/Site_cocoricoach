@@ -398,6 +398,11 @@ body {
 .hover-white:hover {
   color: white !important;
 }
+.footer-social-placeholder {
+  opacity: 0.45;
+  pointer-events: none;
+  cursor: default;
+}
 
 /* ============ MEDIA QUERIES (MOBILES & TABLETTES) ============ */
 @media (max-width: 991px) {

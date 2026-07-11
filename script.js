@@ -1,6 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init({ once: true, offset: 50, duration: 800, easing: "ease-out" });
   applyLanguage(getCurrentLang());
+
+  // Initialise la navbar en glass dès le chargement si la page a un hero plein écran
+  const navbar = document.querySelector(".navbar");
+  if (navbar && navbar.classList.contains("fixed-top")) {
+    if (
+      (document.querySelector(".portal-hero-container") ||
+        document.querySelector(".fullscreen-hero-canvas")) &&
+      window.scrollY <= 50
+    ) {
+      navbar.classList.remove("bg-white", "shadow-sm");
+      navbar.classList.add("glass-nav");
+      const brandText = document.querySelector(".brand-text");
+      if (brandText) {
+        brandText.classList.add("text-white");
+        brandText.classList.remove("text-primary-dark");
+      }
+    }
+  }
 });
 
 window.addEventListener("scroll", function () {
@@ -128,7 +146,7 @@ const translations = {
     // ---- FOOTER (commun) ----
     "footer-tagline": "Solution complète et souveraine de gestion et d'optimisation de la performance sportive.",
     "footer-solutions-title": "Solutions",
-    "footer-solutions-coach": "Cocoricoach Independent",
+    "footer-solutions-coach": "Cocoricoach",
     "footer-solutions-club": "Cocoricoach Club",
     "footer-resources-title": "Ressources",
     "footer-resources-doc": "Documentation API",
@@ -367,7 +385,7 @@ const translations = {
     // ---- FOOTER (common) ----
     "footer-tagline": "A complete, independent solution for managing and optimizing sports performance.",
     "footer-solutions-title": "Solutions",
-    "footer-solutions-coach": "Cocoricoach Independent",
+    "footer-solutions-coach": "Cocoricoach",
     "footer-solutions-club": "Cocoricoach Club",
     "footer-resources-title": "Resources",
     "footer-resources-doc": "API Documentation",
